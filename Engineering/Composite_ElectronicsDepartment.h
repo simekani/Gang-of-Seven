@@ -12,15 +12,13 @@ class Composite_ElectronicsDepartment;
 
 class Composite_ElectronicsDepartment: public ElectronicsDepartment
 {
-	public: ElectronicsDepartment* _unnamed_ElectronicsDepartment_;
+	public: vector <ElectronicsDepartment* > _children;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > specs, string aName);
 
-	public: void add(ElectronicsDepartment aParam);
+	public: void add(ElectronicsDepartment*  aParam);
 
-	public: void remove(ElectronicsDepartment aParam);
-
-	public: void getChild(int aParam);
+	public: ElectronicsDepartment* getChild(int aParam);
 };
 
 #endif
