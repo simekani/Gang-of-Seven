@@ -16,7 +16,7 @@ Defensive::Defensive(string StrategyName) {
 
 void Defensive::strategyBlueprint() {
 	// TODO - implement Defensive::strategyBlueprint
-	cout<< "The driver will be using Defensive Race Strategy!"<<endl; 
+	cout<<endl<< "The driver will be using Defensive Race Strategy!"<<endl; 
 	cout<<Name<<" Defensive Strategy Blueprint"<<endl; 
 
 	cout<< "This Implies that the "<<numberOfPitstops<<" pitstop strategy will be taken"<<endl;

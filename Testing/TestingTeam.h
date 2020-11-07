@@ -1,8 +1,7 @@
 #ifndef TESTINGTEAM_H
 #define TESTINGTEAM_H
 #include "../Engineering/EngineeringTeam.h"
-#include "../Engineering/Parts.h"
-
+//#include "../Engineering/Parts.h"
 
 class TestingTeam : EngineeringTeam {
 
@@ -13,7 +12,7 @@ private:
 	Command* turnOnSimulator;
 	Command* turnOffSimulator;
 	Command* startSimulator;
-
+	
 public:
 	void sendMessage(bool result);
 
@@ -24,7 +23,6 @@ public:
 	void testCarModel(Car* model);
 
 	void simulatePartPerformance(Parts* part);
-
 };
 
 #endif

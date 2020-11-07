@@ -10,6 +10,7 @@ private:
 	StrategyPack* Strategy;
 
 public:
+
 	void composeStrategy(string Strategy, string StrategyName);
 };
 
