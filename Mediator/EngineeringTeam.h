@@ -8,11 +8,12 @@ using namespace std;
 #include "ComplexSpecs.cpp"
 #include "Car.h"
 #include "Driver.h"
+#include "TestingBoardroom.h"
 
 class EngineeringTeam{
 	protected: 
 		SpecsBoardroom* _sendSpecs;
-	
+		TestingBoardRoom* tBoardRoom; 
 	public:
 		Car* _Car;
 		Driver* _Driver;
