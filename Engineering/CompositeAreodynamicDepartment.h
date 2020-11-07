@@ -1,4 +1,4 @@
-#include <exception>
+#include <vector>
 #include <string>
 using namespace std;
 
@@ -12,16 +12,33 @@ class CompositeAreodynamicDepartment;
 
 class CompositeAreodynamicDepartment: public AreodynamicsDepartment
 {
-	private: Aerodynamic _children;
+	private: vector<AreodynamicsDepartment*> subdepartments;
+
 	public: AreodynamicsDepartment* _unnamed_AreodynamicsDepartment_;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > &specs, string aName);
 
-	public: void add(Aerodynamic aParam);
+	public: void add(AreodynamicsDepartment* department);
 
-	public: void remove(Aerodynamic aParam);
-
-	public: void getChild(int aParam);
+	public: AreodynamicsDepartment* getChild(int aParam);
 };
 
 #endif
+
+
+/* 
+
+void RearWing::buildpart(vector <float* > &specs, string aName) {
+	if(aName == "floor"){
+		_parts = new Rear();
+		_parts->buildPart();
+		cout << "With specifications of: "<<endl;
+		for(int i = 0; i < specs.size(); i++){
+			cout << specs[i] <<endl;
+		}
+	}else{
+		_successor->buildpart( specs, aName);
+	}
+}
+
+*/

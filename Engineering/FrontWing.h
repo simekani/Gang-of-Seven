@@ -12,8 +12,8 @@ class FrontWing;
 
 class FrontWing: public AreodynamicsDepartment
 {
-
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > &specs, string aName);
+	
 };
 
 #endif

@@ -1,14 +1,12 @@
-#include <exception>
-using namespace std;
 
 #include "Engine.h"
 #include "Parts.h"
 
 void Engine::getResult() {
-	throw "Not yet implemented";
+	cout << "Engine"<<endl;
 }
 
 void Engine::buildPart() {
-	throw "Not yet implemented";
+	cout << "BUild Engine"<<endl;
 }
 

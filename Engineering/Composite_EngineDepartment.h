@@ -17,7 +17,7 @@ class Composite_EngineDepartment: public EngineDepartment
 	private: Engine _children;
 	public: EngineDepartment* _unnamed_EngineDepartment_;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > &specs, string aName);
 
 	public: void add(Engine aParam);
 
