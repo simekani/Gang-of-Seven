@@ -1,5 +1,9 @@
 #include "TestingTeam.h"
 
+TestingTeam::TestingTeam() {
+    
+}
+
 void TestingTeam::sendMessage(bool result) {
 	// TODO - implement TestingTeam::sendMessage	
 }
