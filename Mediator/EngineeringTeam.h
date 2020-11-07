@@ -19,8 +19,8 @@ class EngineeringTeam{
 		Driver* _Driver;
 		
 		void changed();
-		virtual ComplexSpecs* getSpecs()=0;
-		virtual void setSpecs(ComplexSpecs *specs)=0;
+		virtual ComplexSpecs* getSpecs();
+		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);
 		virtual void recieveMessage(Parts* part) ;// for testing team 
 

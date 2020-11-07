@@ -1,8 +1,8 @@
 #include "TestingBoardroom.h"
-
+#include "../Testing/TestingTeam.h"
 TestingBoardroom::TestingBoardroom() {
 	// TODO - implement TestingBoardroom::TestingBoardroom
-	
+	participants[0] = new TestingTeam(); 
 }
 
 void TestingBoardroom::relayModel(Car* model) {

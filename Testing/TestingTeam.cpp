@@ -17,6 +17,7 @@ void TestingTeam::recieveMessage(Car* model) {
 void TestingTeam::testCarModel(Car* model) {
 	// TODO - implement TestingTeam::testCarModel
 	// call command for testing a Part 
+	
 }
 
 void TestingTeam::simulatePartPerformance(Parts* part) {
