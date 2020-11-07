@@ -10,7 +10,9 @@ class Chassis: public Parts
 {
 
 	public: void getResult();
-
+	public: string getName(){
+				return "Chassis" ;
+			};
 	public: void buildPart();
 };
 

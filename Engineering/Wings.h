@@ -9,7 +9,10 @@ class Wings: public Parts
 {
 
 	public: void buildPart();
-
+	
+	public: string getName(){
+				return "Wing" ;
+			};
 	public: virtual string primitiveOperation();
 };
 

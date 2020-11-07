@@ -11,7 +11,9 @@ class Engine: public Parts
 {
 
 	public: void getResult();
-
+		public: string getName(){
+				return "Engine" ;
+			};
 	public: void buildPart();
 };
 

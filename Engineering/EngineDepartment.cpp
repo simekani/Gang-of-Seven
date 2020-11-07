@@ -7,8 +7,18 @@ using namespace std;
 #include "Engine.h"
 #include "EngineeringDepartment.h"
 
-void EngineDepartment::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+void EngineDepartment::buildpart(vector <float* > &specs, string aName) {
+	if(aName == "Engine"){
+		_parts = new Engine();
+		_parts->buildPart();
+		cout << "with specification:"<<endl;
+		for(int i = 0; i < specs.size(); i++){
+			cout << specs[i] <<endl;
+		}
+
+	}else{
+		_successor->buildpart(specs, aName);
+	}
 }
 
 void EngineDepartment::add(Engine aParam) {

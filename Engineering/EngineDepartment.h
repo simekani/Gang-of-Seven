@@ -18,7 +18,7 @@ class EngineDepartment: public EngineeringDepartment
 {
 	public: Composite_EngineDepartment* _unnamed_Composite_EngineDepartment_;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > &specs, string aName);
 
 	public: void add(Engine aParam);
 
@@ -28,3 +28,4 @@ class EngineDepartment: public EngineeringDepartment
 };
 
 #endif
+

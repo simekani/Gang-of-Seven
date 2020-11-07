@@ -11,7 +11,9 @@ class Electronics: public Parts
 {
 
 	public: void getResult();
-
+		public: string getName(){
+				return "Electronics";
+			};
 	public: void buildPart();
 };
 
