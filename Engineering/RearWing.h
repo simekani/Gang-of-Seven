@@ -7,13 +7,10 @@ using namespace std;
 
 #include "AreodynamicsDepartment.h"
 
-// class AreodynamicsDepartment;
-class RearWing;
-
 class RearWing: public AreodynamicsDepartment
 {
-
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float* > &specs, string aName);
+	
 };
 
 #endif
