@@ -2,7 +2,7 @@
 using namespace std;
 
 #ifndef __EngineeringTeam_h__
-#define __EngineeringTeam_h__
+#define __EngineeringTeam_h
 
 #include "sendSpecs.h"
 // #include "BoardRoom.h"
@@ -18,10 +18,10 @@ class EngineeringTeam;
 class EngineeringTeam
 {
 	private: sendSpecs _sendSpecs;
-	public: BoardRoom* _unnamed_BoardRoom_;
-	public: Car* _unnamed_Car_;
-	public: Driver* _unnamed_Driver_;
-	public: sendSpecs* _unnamed_sendSpecs_;
+	public: BoardRoom* BoardRoom_;
+	public: Car* Car_;
+	public: Driver* Driver_;
+	public: sendSpecs* sendSpecs_;
 
 	public: void changed();
 
