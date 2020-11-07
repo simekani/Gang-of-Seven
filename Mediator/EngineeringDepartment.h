@@ -1,24 +1,38 @@
 #ifndef ENGINEERINGDEPARTMENT_H
 #define ENGINEERINGDEPARTMENT_H
 
-class EngineeringDepartment : EngineeringTeam {
+#include "../Engineering/Car.h"
+#include "EngineeringTeam.h"
+#include "../Engineering/Parts.h"
+#include "../Engineering/Car.h"
+#include "EngineeringTeam.h"
+#include "../Engineering/ComplexSpecs.cpp"
 
-public:
-	Parts* parts;
+class Parts;
+class Car;
+class EngineeringTeam;
+class EngineeringDepartment;
 
-	void set();
+#include <string>
+using namespace std;
 
-	void get();
-
-	Parts* makeParts();
-
-	void sendToTesting();
-
-	void sendPartToTesting(Part* part);
-
-	void receiveResult(bool result);
-
-	void sendModelToTesting(Car* model);
+class EngineeringDepartment: public EngineeringTeam
+{
+	private: 
+		Parts* _parts;
+		EngineeringDepartment* _successor;
+	public: 
+		Parts* _unnamed_Parts_;
+		void setNext(EngineeringDepartment* aSuccessor);
+		EngineeringDepartment* getNext();
+		Parts* makeParts();
+		void sendToTesting();
+		void sendPartToTesting(Parts* aPart);
+		void receiveResult(bool aResult);
+		void sendModelToTesting(Car* aModel);
+		void buildpart(float* Spec, string Name);
+		void recieveSpecs(ComplexSpecs* specs);
+		void assembleCar(Parts* aPart);
 };
 
 #endif

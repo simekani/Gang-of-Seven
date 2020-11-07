@@ -1,17 +1,25 @@
+#include <exception>
+using namespace std;
+
 #ifndef ENGINEERINGTEAM_H
 #define ENGINEERINGTEAM_H
 
-class EngineeringTeam {
+#include "SpecsBoardroom.h"
+#include "../Engineering/ComplexSpecs.cpp"
+#include "../Engineering/Car.h"
+#include "../Engineering/Driver.h"
 
-private:
-	sendSpecs SendSpecs;
-
-public:
-	void changed();
-
-	sendSpecs getSpecs();
-
-	void set(sendSpecs s);
+class EngineeringTeam{
+	protected: 
+		SpecsBoardroom* _sendSpecs;
+	
+	public:
+		Car* _Car;
+		Driver* _Driver;
+		
+		void receivedDesignSpecs();
+		virtual ComplexSpecs* getSpecs()=0;
+		virtual void setSpecs(ComplexSpecs *specs)=0;
 };
 
 #endif
