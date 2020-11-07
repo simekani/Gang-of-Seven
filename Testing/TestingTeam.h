@@ -1,7 +1,7 @@
 #ifndef TESTINGTEAM_H
 #define TESTINGTEAM_H
-#include "../Engineering/EngineeringTeam.h"
-//#include "../Engineering/Parts.h"
+#include "../Mediator/EngineeringTeam.h"
+#include "../Engineering/Parts.h"
 
 class TestingTeam : EngineeringTeam {
 
