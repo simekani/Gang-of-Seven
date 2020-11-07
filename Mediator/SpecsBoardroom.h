@@ -1,13 +1,20 @@
+#include <exception>
+using namespace std;
+
 #ifndef SPECSBOARDROOM_H
 #define SPECSBOARDROOM_H
 
-class SpecsBoardroom : BoardRoom {
+#include "EngineeringTeam.h"
+#include "BoardRoom.h"
 
+class EngineeringTeam;
+class BoardRoom;
 
-public:
-	SpecsBoardroom();
-
-	void relayDimensions(float* d);
+class SpecsBoardroom: public BoardRoom
+{
+	public: 
+		SpecsBoardroom();
+		void relayDimensions(EngineeringTeam* engTeam);
 };
 
 #endif
