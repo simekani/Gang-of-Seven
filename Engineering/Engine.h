@@ -1,11 +1,9 @@
-#include <exception>
-using namespace std;
 
 #ifndef __Engine_h__
 #define __Engine_h__
 
 #include "Parts.h"
-
+using namespace std;
 // class Parts;
 class Engine;
 

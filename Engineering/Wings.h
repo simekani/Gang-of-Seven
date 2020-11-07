@@ -1,20 +1,16 @@
-#include <exception>
-using namespace std;
 
 #ifndef __Wings_h__
 #define __Wings_h__
 
 #include "Parts.h"
-
-// class Parts;
-class Wings;
+using namespace std;
 
 class Wings: public Parts
 {
 
 	public: void buildPart();
 
-	public: void primitiveOperation();
+	public: virtual string primitiveOperation();
 };
 
 #endif

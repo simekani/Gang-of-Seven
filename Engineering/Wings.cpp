@@ -5,10 +5,6 @@ using namespace std;
 #include "Parts.h"
 
 void Wings::buildPart() {
-	throw "Not yet implemented";
-}
-
-void Wings::primitiveOperation() {
-	throw "Not yet implemented";
+	cout << " Build the " << primitiveOperation() <<" wing" <<endl;
 }
 

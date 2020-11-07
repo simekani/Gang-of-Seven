@@ -1,14 +1,12 @@
-#include <exception>
-using namespace std;
 
 #include "Electronics.h"
 #include "Parts.h"
 
 void Electronics::getResult() {
-	throw "Not yet implemented";
+	cout << "Electronics"<<endl;
 }
 
 void Electronics::buildPart() {
-	throw "Not yet implemented";
+	cout << "Build the Electronics"<<endl;
 }
 

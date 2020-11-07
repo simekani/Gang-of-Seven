@@ -5,10 +5,10 @@ using namespace std;
 #include "Parts.h"
 
 void Chassis::getResult() {
-	throw "Not yet implemented";
+	cout << " chassis"<<endl;
 }
 
 void Chassis::buildPart() {
-	throw "Not yet implemented";
+	cout << "build chassis"<<endl;
 }
 
