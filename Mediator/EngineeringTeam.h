@@ -13,7 +13,7 @@ using namespace std;
 class EngineeringTeam{
 	protected: 
 		SpecsBoardroom* _sendSpecs;
-		TestingBoardRoom* tBoardRoom; 
+		TestingBoardroom* tBoardRoom; 
 	public:
 		Car* _Car;
 		Driver* _Driver;
@@ -22,7 +22,8 @@ class EngineeringTeam{
 		virtual ComplexSpecs* getSpecs()=0;
 		virtual void setSpecs(ComplexSpecs *specs)=0;
 		void sendMessage(bool result);
-		virtual void receiveMessage(Parts* part) ;// for testing team 
+		virtual void recieveMessage(Parts* part) ;// for testing team 
+
 		virtual void recieveMessage(Car* model) ; // for testing team 
 };
 

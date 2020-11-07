@@ -2,15 +2,15 @@
 
 TestingBoardroom::TestingBoardroom() {
 	// TODO - implement TestingBoardroom::TestingBoardroom
-	throw "Not yet implemented";
+	
 }
 
 void TestingBoardroom::relayModel(Car* model) {
 	// TODO - implement TestingBoardroom::relayModel
-	throw "Not yet implemented";
+	participants[0]->recieveMessage(model); 
 }
 
-void TestingBoardroom::relayPart(Part* part) {
+void TestingBoardroom::relayPart(Parts* part) {
 	// TODO - implement TestingBoardroom::relayPart
-	throw "Not yet implemented";
+	participants[0]->recieveMessage(part); 
 }

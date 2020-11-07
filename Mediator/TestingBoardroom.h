@@ -6,10 +6,8 @@ class TestingBoardroom : BoardRoom {
 
 public:
 	TestingBoardroom();
-
 	void relayModel(Car* model);
-
-	void relayPart(Part* part);
+	void relayPart(Parts* part);
 };
 
 #endif
