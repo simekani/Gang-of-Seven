@@ -7,5 +7,5 @@ ComplexSpecs* DesignTeam::getSpecs() {
 
 void DesignTeam::setSpecs(ComplexSpecs* specs) {
     currentDesignSpecs = specs;
-    changed();
+    receivedDesignSpecs();
 }
