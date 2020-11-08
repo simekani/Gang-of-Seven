@@ -1,6 +1,3 @@
-
-
-
 #ifndef BOARDROOM_H
 #define BOARDROOM_H
 
