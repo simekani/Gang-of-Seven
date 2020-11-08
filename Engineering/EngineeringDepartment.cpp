@@ -9,7 +9,9 @@ EngineeringDepartment* EngineeringDepartment::getNext() {
 }
 
 void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
-	TestingBoardroom::relayPart(aPart);
+	
+	TestingBoardroom::getInstance()->relayPart(aPart);
+
 }
 
 void EngineeringDepartment::receiveResult(bool aResult) {
@@ -17,7 +19,9 @@ void EngineeringDepartment::receiveResult(bool aResult) {
 }
 
 void EngineeringDepartment::sendModelToTesting(Car* aModel) {
-	TestingBoardroom::relayModel(aModel);
+
+	TestingBoardroom::getInstance()->relayModel(aModel);
+	
 }
 
 
