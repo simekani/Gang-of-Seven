@@ -23,7 +23,7 @@ class Race {
 
 class QualifyingRace : public Race {
     public:
-        QualifyingRace();
+        QualifyingRace(CarStorage*, GridOrderStore*);
         virtual ~QualifyingRace();
         void startRace();
 };

@@ -6,10 +6,38 @@ Race::Race() {
 
 Race::~Race() {}
 
-QualifyingRace::QualifyingRace() {}
-QualifyingRace::~QualifyingRace() {}
-void QualifyingRace::startRace() {
+QualifyingRace::QualifyingRace(CarStorage* _carStorage, GridOrderStore* _store) {
+    carStorage = _carStorage;
+    iterator = carStorage->createIterator();
+    iterator->first();
+    store = _store;
+}
 
+QualifyingRace::~QualifyingRace() {
+    delete iterator;
+}
+
+void QualifyingRace::startRace() {
+    cout << endl << "Starting Qualifying Race..." << endl;
+    for (int i = 0; i < 3; i++) {
+        int positionChangeCount = rand() % 5;
+        iterator->first();
+        CarStorage* positions = new RacingCarStorage();
+        while (!iterator->isDone()) {
+            positions->addCar(iterator->current());
+            iterator->next();
+        }
+        positions->addCar(iterator->current());
+        for (int j = 0; j < positionChangeCount; j++) {
+            int carPositionChange1 = rand() % positions->getSize();
+            int carPositionChange2 = rand() % positions->getSize();
+            positions->swapCars(carPositionChange1, carPositionChange2);
+        }
+        GridOrder* currentGridOrder = new GridOrder();
+        currentGridOrder->setPositions(positions);
+        store->setStoredGridOrder(currentGridOrder);
+    }
+    cout << endl << "END OF QUALIFIERS" << endl;
 }
 
 FinalRace::FinalRace(CarStorage* _carStorage, GridOrderStore* _store) {
