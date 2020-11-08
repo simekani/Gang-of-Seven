@@ -14,6 +14,7 @@ class StartWindTunnel : public Command {
 
         StartWindTunnel(WindTunnel* tunnel);
         void setCarModel(Car* modelCar);
+        bool isUsable() const;
         void execute();
 };
 

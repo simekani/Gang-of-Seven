@@ -3,6 +3,7 @@
 WindTunnel::WindTunnel() {
 
     carModel = NULL;
+    tokens = 400;
 }
 
 void WindTunnel::setCarModel(Car* carModel) {
@@ -12,6 +13,8 @@ void WindTunnel::setCarModel(Car* carModel) {
 
 bool WindTunnel::run() {
     
+    decreaseTokens();
+
     cout << "Running wind tunnel test" << endl;
 
     int passed = rand() % 2;
@@ -26,4 +29,19 @@ bool WindTunnel::run() {
     }
     
     return passed;
+}
+
+void WindTunnel::WindTunnel::decreaseTokens() {
+
+   this->tokens--; 
+}
+
+bool WindTunnel::WindTunnel::hasTokens() {
+
+    if (tokens > 0) {
+
+        return true;
+    }    
+
+    return false;
 }

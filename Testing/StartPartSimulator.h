@@ -10,7 +10,6 @@ class StartPartSimulator : public Command {
     private:
 
         Simulator* simulator;
-        Parts* part;
 
     public:
 

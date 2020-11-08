@@ -11,11 +11,14 @@ class WindTunnel {
     private:
 
         Car* carModel;
+        int tokens;
 
     public:
 
         WindTunnel();
         void setCarModel(Car* carModel);
+        void decreaseTokens();
+        bool hasTokens();
         bool run();
 };
 
