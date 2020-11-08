@@ -1,6 +1,7 @@
 #include "EngineeringDepartment.h"
 
 
+
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
 	this->_successor = aSuccessor;
 }
@@ -10,15 +11,15 @@ EngineeringDepartment* EngineeringDepartment::getNext() {
 }
 
 void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
-	
+	//TestingBoardroom::relayPart(aPart);
 }
 
 void EngineeringDepartment::receiveResult(bool aResult) {
-	
+	result = aResult;
 }
 
 void EngineeringDepartment::sendModelToTesting(Car* aModel) {
-	
+	//TestingBoardroom::relayCar(aModel);
 }
 
 

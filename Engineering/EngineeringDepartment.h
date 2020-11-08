@@ -6,6 +6,7 @@
 #include "../Engineering/Parts.h"
 #include "../Engineering/Car.h"
 #include "../Engineering/ComplexSpecs.cpp"
+#include "../Mediator/TestingBoardroom.h"
 
 class Parts;
 class Car;
@@ -20,6 +21,7 @@ class EngineeringDepartment: public EngineeringTeam
 	protected: 
 		Parts* _parts;
 		EngineeringDepartment* _successor;
+		bool result;
 	public: 
 		Parts* _unnamed_Parts_;
 		void setNext(EngineeringDepartment* aSuccessor);

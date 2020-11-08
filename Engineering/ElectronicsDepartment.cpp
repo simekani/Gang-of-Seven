@@ -15,7 +15,9 @@ void ElectronicsDepartment::buildpart(vector <float> aSpec, string aName) {
 		for(int i = 0; i < aSpec.size(); i++){
 			cout << aSpec[i] <<endl;
 		}
-		EngineeringDepartment::sendPartToTesting(_parts);
+		result = false;
+		while(!result)
+			EngineeringDepartment::sendPartToTesting(_parts);
 	}else{
 		_successor->buildpart(aSpec, aName);
 	}
