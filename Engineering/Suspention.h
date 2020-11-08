@@ -13,7 +13,7 @@ class Suspention;
 class Suspention: public ChassisDepartment
 {
 
-	public: void buildpart(float* aSpec, string aName);
+	//public: void buildpart(float* aSpec, string aName);
 };
 
 #endif
