@@ -5,7 +5,8 @@ using namespace std;
 #include "combutionChamber.h"
 #include "EngineDepartment.h"
 
-void combutionChamber::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+void combutionChamber::buildpart(vector <float* > &specs, string aName) {
+	cout <<"Building a combutionChamber"<<endl;
+	EngineDepartment::buildpart(specs, aName);
 }
 

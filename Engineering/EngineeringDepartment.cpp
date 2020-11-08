@@ -35,11 +35,11 @@ void EngineeringDepartment::sendModelToTesting(Car* aModel) {
 	throw "Not yet implemented";
 }
 
-void EngineeringDepartment::buildpart(float* aSpec, string aName) {
+void EngineeringDepartment::buildpart(vector <float*> aSpec, string aName) {
 	throw "Not yet implemented";
 }
 
-void EngineeringDepartment::recieveSpecs(float* aSpec, string aName) {
+void EngineeringDepartment::recieveSpecs(vector <float*> aSpec, string aName) {
 	throw "Not yet implemented";
 }
 
@@ -47,3 +47,6 @@ void EngineeringDepartment::assembleCar(Parts* aPart) {
 	throw "Not yet implemented";
 }
 
+void EngineeringDepartment::setSuccessor(EngineeringDepartment* _successor){
+	this->_successor = _successor;
+}

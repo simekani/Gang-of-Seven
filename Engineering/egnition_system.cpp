@@ -5,7 +5,8 @@ using namespace std;
 #include "egnition_system.h"
 #include "EngineDepartment.h"
 
-void egnition_system::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+void egnition_system::buildpart(vector <float* > &specs, string aName) {
+	cout <<"Building a Egnition System"<<endl;
+	EngineDepartment::buildpart(specs, aName);
 }
 

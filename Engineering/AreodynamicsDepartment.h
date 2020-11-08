@@ -1,28 +1,18 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __AreodynamicsDepartment_h__
 #define __AreodynamicsDepartment_h__
 
-// #include "CompositeAreodynamicDepartment.h"
+#include "CompositeAreodynamicDepartment.h"
 #include "EngineeringDepartment.h"
-
-// class CompositeAreodynamicDepartment;
-// class EngineeringDepartment;
-class AreodynamicsDepartment;
+#include <string>
+using namespace std;
 
 class AreodynamicsDepartment: public EngineeringDepartment
 {
-	public: CompositeAreodynamicDepartment* _unnamed_CompositeAreodynamicDepartment_;
+	public: virtual void buildpart(vector <float* > &specs, string aName) = 0;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: virtual void add(AreodynamicsDepartment* department) = 0;
 
-	public: void add(Aerodynamics aParam);
-
-	public: void remove(Aerodynamic aParam);
-
-	public: void getChild(int aParam);
+	public: virtual AreodynamicsDepartment* getChild(int aParam) = 0;
 };
 
 #endif

@@ -5,19 +5,16 @@ using namespace std;
 #include "CompositeAreodynamicDepartment.h"
 #include "AreodynamicsDepartment.h"
 
-void CompositeAreodynamicDepartment::buildpart(float* aSpec, string aName) {
+void CompositeAreodynamicDepartment::buildpart(vector <float* > &specs, string aName) {
 	throw "Not yet implemented";
 }
 
-void CompositeAreodynamicDepartment::add(Aerodynamic aParam) {
-	throw "Not yet implemented";
+void CompositeAreodynamicDepartment::add(AreodynamicsDepartment* dept) {
+	subdepartments.push_back(dept);
 }
 
-void CompositeAreodynamicDepartment::remove(Aerodynamic aParam) {
-	throw "Not yet implemented";
-}
 
-void CompositeAreodynamicDepartment::getChild(int aParam) {
-	throw "Not yet implemented";
+AreodynamicsDepartment* CompositeAreodynamicDepartment::getChild(int dept) {
+	return subdepartments[dept];
 }
 

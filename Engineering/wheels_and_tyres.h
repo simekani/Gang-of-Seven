@@ -13,7 +13,7 @@ class wheels_and_tyres;
 class wheels_and_tyres: public ChassisDepartment
 {
 
-	public: void buildpart(float* aSpec, string aName);
+	//public: void buildpart(float* aSpec, string aName);
 };
 
 #endif

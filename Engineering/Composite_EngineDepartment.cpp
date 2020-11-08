@@ -6,19 +6,13 @@ using namespace std;
 #include "Engine.h"
 #include "EngineDepartment.h"
 
-void Composite_EngineDepartment::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+
+void Composite_EngineDepartment::add(Engine* aParam) {
+	_children.push_back(aParam);
 }
 
-void Composite_EngineDepartment::add(Engine aParam) {
-	throw "Not yet implemented";
-}
 
-void Composite_EngineDepartment::remove(Engine aParam) {
-	throw "Not yet implemented";
-}
-
-void Composite_EngineDepartment::getChild(int aParam) {
-	throw "Not yet implemented";
+Engine* Composite_EngineDepartment::getChild(int aParam) {
+	return _children[aParam];
 }
 
