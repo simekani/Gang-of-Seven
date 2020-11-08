@@ -28,7 +28,6 @@ int main(){
 
 
 
-
     //Design Team Mediator Testing
     EngineeringTeam* designTeam = new DesignTeam();
     designTeam->setSpecs(designSpecs);
