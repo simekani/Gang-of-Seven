@@ -10,21 +10,29 @@ void Logistics::demonstrateChainOfResponsibility(){
 }
 
 void Logistics::demonstrateCommand(){
+    //vector<Parts*> priorityPart;
+    //Parts* nonpriorityPart;
     vector<PriorityPallet*> priority;
     vector<NonPriorityPallet*> nonpriority;
     
 // Receivers , Invoker
+    Parts* engine = new Engine();
     PriorityPallet* enginePallet = new PriorityPallet();
     priority.push_back(enginePallet);
 
+    Parts* chassis = new Chassis();
     PriorityPallet* chassisPallet = new PriorityPallet();
     priority.push_back(chassisPallet);
 
+    Parts* electronic = new Electronics();
     NonPriorityPallet* eletronicPallet = new NonPriorityPallet();
     nonpriority.push_back(eletronicPallet);
 
+    Parts* wing = new Wings();
     NonPriorityPallet* wingPallet = new NonPriorityPallet();
     nonpriority.push_back(wingPallet);
+
+    
 
 // Commands
 //?? do i need to instantiate new commands for each receiver or can i reuse
@@ -32,23 +40,25 @@ void Logistics::demonstrateCommand(){
     PackNonPriorityPallet* packNonPriorityPalletCommand;
     UnpackPriorityPallet* unpackPriorityPalletCommand;
     PackPriorityPallet* packPriorityPalletCommand;
-    for (vector<PriorityPallet*>::iterator it = priority.begin(); it != priority.end(); ++it)
-    {
-        unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet(priority[*it]);
-    }
 
     for (vector<PriorityPallet*>::iterator it = priority.begin(); it != priority.end(); ++it)
     {
-
+        packNonPriorityPalletCommand = new PackNonPriorityPallet(*it);
+        packNonPriorityPalletCommand->execute()
     }
-    UnpackNonPriorityPallet* unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet();
-    PackNonPriorityPallet* packNonPriorityPalletCommand = new PackNonPriorityPallet();
-    UnpackPriorityPallet* unpackPriorityPalletCommand = new UnpackPriorityPallet();
-    PackPriorityPallet* packPriorityPalletCommand = new PackNonPriorityPallet();
-    #include "UnpackPriorityPallet.h"
-    #include "PackPriorityPallet.h"
 
-    #include "PreparePallet.h"//Command: Receivers, Commands, Invoker
+    for (vector<NonPriorityPallet*>::iterator it = nonpriority.begin(); it != nonpriority.end(); ++it)
+    {
+        unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet(*it);
+        unpackNonPriorityPalletCommand->execute();
+        
+    }
+   // UnpackNonPriorityPallet* unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet();
+    //PackNonPriorityPallet* packNonPriorityPalletCommand = new PackNonPriorityPallet();
+    //UnpackPriorityPallet* unpackPriorityPalletCommand = new UnpackPriorityPallet();
+    //PackPriorityPallet* packPriorityPalletCommand = new PackNonPriorityPallet();
+
+/*    #include "PreparePallet.h"//Command: Receivers, Commands, Invoker
     #include "PriorityPallet.h"
     #include "NonPriorityPallet.h"
 
@@ -57,7 +67,7 @@ void Logistics::demonstrateCommand(){
     #include "UnpackPriorityPallet.h"
     #include "PackPriorityPallet.h"
 
-    #include "PreparePallet.h"
+    #include "PreparePallet.h"*/
 }
 
 void Logistics::demonstrateIterator(){//make bold or whatever

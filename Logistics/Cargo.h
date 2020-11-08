@@ -3,7 +3,10 @@
 #include <vector>
 
 #include "Transport.h"
-#include "Parts.h"
+#include "../Engineering/Chassis.h"
+#include "../Engineering/Electronics.h"
+#include "../Engineering/Engine.h"
+#include "../Engineering/Wings.h"
 
 class Cargo {
 protected:
