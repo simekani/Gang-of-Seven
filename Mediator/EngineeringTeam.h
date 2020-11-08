@@ -1,13 +1,10 @@
-#include <exception>
-using namespace std;
-
 #ifndef ENGINEERINGTEAM_H
 #define ENGINEERINGTEAM_H
 
 #include "SpecsBoardroom.h"
-#include "ComplexSpecs.cpp"
-#include "Car.h"
-#include "Driver.h"
+#include "../Engineering/ComplexSpecs.cpp"
+#include "../Engineering/Car.h"
+#include "../Engineering/Driver.h"
 #include "TestingBoardroom.h"
 
 class EngineeringTeam{
@@ -19,8 +16,8 @@ class EngineeringTeam{
 		Driver* _Driver;
 		
 		void changed();
-		virtual ComplexSpecs* getSpecs()=0;
-		virtual void setSpecs(ComplexSpecs *specs)=0;
+		virtual ComplexSpecs* getSpecs();
+		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);
 		virtual void receiveMessage(Parts* part) ;// for testing team 
 		virtual void recieveMessage(Car* model) ; // for testing team 

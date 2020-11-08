@@ -1,15 +1,16 @@
 #ifndef TESTINGBOARDROOM_H
 #define TESTINGBOARDROOM_H
+
 #include "BoardRoom.h"
-class TestingBoardroom : BoardRoom {
+#include "../Engineering/Parts.h"
 
+class TestingBoardroom : public BoardRoom {
+	public:
+		TestingBoardroom();
 
-public:
-	TestingBoardroom();
+		void relayModel(Car* model);
 
-	void relayModel(Car* model);
-
-	void relayPart(Part* part);
+		void relayPart(Parts* part);
 };
 
 #endif
