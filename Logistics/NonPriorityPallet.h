@@ -6,9 +6,9 @@ class NonPriorityPallet : public Cargo {
 
 
 public:
-	NonPriorityPallet();
+	NonPriorityPallet(Parts* );
 
-	void pack(Parts* part);
+	void pack();
 
 	void unpack();
 };

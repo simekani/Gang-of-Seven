@@ -14,7 +14,10 @@ protected:
 
 public:
 	PackPallet(Cargo* receiver);
-	virtual void execute(Parts* part) = 0;
+	virtual void execute() = 0;
 };
 
 #endif
+
+
+

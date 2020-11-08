@@ -2,8 +2,6 @@
 #include <iostream>
 using namespace std;
 
-Warehouse::Warehouse(){}
-
 Iterator* Warehouse::createIterator() {
 	iterator = new PartIterator(list);
 	return iterator;

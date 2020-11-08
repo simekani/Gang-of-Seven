@@ -7,7 +7,7 @@ class PackPriorityPallet: public PackPallet{
 
 public:
 	PackPriorityPallet(Cargo* cargo);
-	void execute(Parts* part);
+	void execute();
 };
 
 #endif

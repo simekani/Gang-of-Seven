@@ -5,11 +5,10 @@
 #include "Cargo.h"
 class PriorityPallet : public Cargo {
 
-
 public:
-	PriorityPallet();
+	PriorityPallet(Parts* part);
 
-	void pack(Parts* part);
+	void pack();
 
 	void unpack();
 };

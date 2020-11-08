@@ -2,12 +2,12 @@
 #define UNPACKNONPRIORITYPALLET_H
 
 #include "PackPallet.h"
-class UnpackNonPriorityPallet : PackPallet {
+class UnpackNonPriorityPallet : public PackPallet {
 
 
 public:
 	UnpackNonPriorityPallet(Cargo* );
-	void execute(Parts* part);
+	void execute();
 };
 
 #endif

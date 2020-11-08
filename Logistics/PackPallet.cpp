@@ -11,3 +11,4 @@ void PackPallet::setReceiver(Cargo* receiver){
 Cargo* PackPallet::getReceiver(){
 	return receiver;
 }
+

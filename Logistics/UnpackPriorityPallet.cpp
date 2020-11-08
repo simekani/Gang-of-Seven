@@ -2,6 +2,6 @@
 
 UnpackPriorityPallet::UnpackPriorityPallet(Cargo* cargo): PackPallet(cargo){}
 
-void UnpackPriorityPallet::execute(Parts* part){
+void UnpackPriorityPallet::execute(){
     getReceiver()->unpack();
 }

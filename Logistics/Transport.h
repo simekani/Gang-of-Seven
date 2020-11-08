@@ -4,13 +4,10 @@
 
 class Transport {
 
-private:
-	virtual string getMode() = 0;
-
 public:
 	Transport();
-
 	void print();
+	virtual std::string getMode() = 0;
 
 };
 

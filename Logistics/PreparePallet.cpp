@@ -1,9 +1,15 @@
 #include "PreparePallet.h"
 
-PreparePallet::PreparePallet(PackPallet* command){
-	this->command = command;
+PreparePallet::PreparePallet(PackPallet* pack, PackPallet* unpack){
+	packCommand = pack;
+	unpackCommand = unpack;
+}
+	
+void PreparePallet::executePack(){
+	packCommand->execute();
 }
 
-void PreparePallet::prepare() {
-	command->execute;
+void PreparePallet::executeUnpack(){
+	unpackCommand->execute();
 }
+

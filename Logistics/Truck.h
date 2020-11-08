@@ -8,7 +8,7 @@ class Truck : public Transport {
 
 public:
 	Truck();
-	string getMode();
+	std::string getMode();
 };
 
 #endif

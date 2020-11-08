@@ -6,68 +6,80 @@ using namespace std;
 Logistics::Logistics(){}
 
 void Logistics::demonstrateChainOfResponsibility(){
+    //every few races need identical containers
+    cout << "Chain of Responsibility Pattern: determine how many containers can be responsible for storing diffent types of equipment" <<endl;
 
+    int max= rand() % 5 + 1;
+    Container* container = new Container("garage",max);
+    container->add( new Container("office", max) );
+    container->add( new Container("catering", max) );
+    container->add( new Container("hospitality", max) );
+
+    int n;
+    cout << "How many containers do you want to use to transport GARAGE equipment (suggested " << max << endl;
+    cin >> n;
+    container->handleRequest(n);
+    cout << endl;
+
+
+    cout << "Given " << max <<" containers, how many containers do you want to use to transport OFFICE equipment (suggested " << max << endl;
+    cin >> n;
+    container->handleRequest(n);
+    cout << endl;
+
+    cout << "How many containers do you want to use to transport CATERING equipment (suggested " << max << endl;
+    cin >> n;
+    container->handleRequest(n);
+    cout << endl;
+
+    cout << "How many containers do you want to use to transport HOSPITALITY equipment (suggested " << max << endl;
+    cin >> n;
+    container->handleRequest(n);
+    cout << endl;
 }
 
 void Logistics::demonstrateCommand(){
-    //vector<Parts*> priorityPart;
-    //Parts* nonpriorityPart;
-    vector<PriorityPallet*> priority;
-    vector<NonPriorityPallet*> nonpriority;
-    
-// Receivers , Invoker
-    Parts* engine = new Engine();
-    PriorityPallet* enginePallet = new PriorityPallet();
-    priority.push_back(enginePallet);
-
+// Receivers
     Parts* chassis = new Chassis();
-    PriorityPallet* chassisPallet = new PriorityPallet();
-    priority.push_back(chassisPallet);
+    Cargo* chassisPallet = new PriorityPallet(chassis);
 
     Parts* electronic = new Electronics();
-    NonPriorityPallet* eletronicPallet = new NonPriorityPallet();
-    nonpriority.push_back(eletronicPallet);
+    Cargo* eletronicPallet = new NonPriorityPallet(electronic);
+
+    Parts* engine = new Engine();
+    Cargo* enginePallet = new PriorityPallet(engine);
 
     Parts* wing = new Wings();
-    NonPriorityPallet* wingPallet = new NonPriorityPallet();
-    nonpriority.push_back(wingPallet);
-
-    
-
+    Cargo* wingPallet = new NonPriorityPallet(wing);
+  
 // Commands
-//?? do i need to instantiate new commands for each receiver or can i reuse
-    UnpackNonPriorityPallet* unpackNonPriorityPalletCommand;
-    PackNonPriorityPallet* packNonPriorityPalletCommand;
-    UnpackPriorityPallet* unpackPriorityPalletCommand;
-    PackPriorityPallet* packPriorityPalletCommand;
+    PackPallet* packChassis = new PackPriorityPallet(chassisPallet);
+    PackPallet* packElectronics = new PackNonPriorityPallet(eletronicPallet);
+    PackPallet* packEngine = new PackPriorityPallet(enginePallet);
+    PackPallet* packWing = new PackNonPriorityPallet(wingPallet);
 
-    for (vector<PriorityPallet*>::iterator it = priority.begin(); it != priority.end(); ++it)
-    {
-        packNonPriorityPalletCommand = new PackNonPriorityPallet(*it);
-        packNonPriorityPalletCommand->execute()
-    }
+    PackPallet* unpackChassis = new UnpackPriorityPallet(chassisPallet);
+    PackPallet* unpackElectronics = new UnpackNonPriorityPallet(eletronicPallet);
+    PackPallet* unpackEngine = new UnpackPriorityPallet(enginePallet);
+    PackPallet* unpackWing = new UnpackNonPriorityPallet(wingPallet);
 
-    for (vector<NonPriorityPallet*>::iterator it = nonpriority.begin(); it != nonpriority.end(); ++it)
-    {
-        unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet(*it);
-        unpackNonPriorityPalletCommand->execute();
-        
-    }
-   // UnpackNonPriorityPallet* unpackNonPriorityPalletCommand = new UnpackNonPriorityPallet();
-    //PackNonPriorityPallet* packNonPriorityPalletCommand = new PackNonPriorityPallet();
-    //UnpackPriorityPallet* unpackPriorityPalletCommand = new UnpackPriorityPallet();
-    //PackPriorityPallet* packPriorityPalletCommand = new PackNonPriorityPallet();
+ //Invoker
+    PreparePallet* executeChassis = new PreparePallet(packChassis, unpackChassis);
+    PreparePallet* executeElectronic = new PreparePallet(packElectronics, unpackElectronics);
+    PreparePallet* executeEngine = new PreparePallet(packEngine, unpackEngine);
+    PreparePallet* executeWing = new PreparePallet(packWing, unpackWing);
+    
+//execute pack up
+    executeWing->executePack();
+    executeElectronic->executePack();
+    executeEngine->executePack();
+    executeChassis->executePack();
 
-/*    #include "PreparePallet.h"//Command: Receivers, Commands, Invoker
-    #include "PriorityPallet.h"
-    #include "NonPriorityPallet.h"
-
-    #include "UnpackNonPriorityPallet.h"
-    #include "PackNonPriorityPallet.h"
-    #include "UnpackPriorityPallet.h"
-    #include "PackPriorityPallet.h"
-
-    #include "PreparePallet.h"*/
+//execute unpack 
+    executeWing->executeUnpack();
+    executeElectronic->executeUnpack();
+    executeEngine->executeUnpack();
+    executeChassis->executeUnpack();
 }
 
 void Logistics::demonstrateIterator(){//make bold or whatever
@@ -79,7 +91,7 @@ void Logistics::demonstrateIterator(){//make bold or whatever
 }
 
 void Logistics::demonstrateTemplate(){//check if priority or whatever.. Cargo has transport variable
-    cout << "Template Pattern: used to determine transport" <<endl;
+    cout << "Template Pattern: used to determine mode of transport" <<endl;
     Transport* ship = new Ship();
     ship->print();
     Transport* truck = new Truck();

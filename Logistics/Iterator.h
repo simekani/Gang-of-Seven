@@ -1,7 +1,6 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
-
-#include "Parts.h"
+#include "../Engineering/Parts.h"
 
 class Iterator {
 

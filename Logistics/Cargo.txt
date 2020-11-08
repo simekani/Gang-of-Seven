@@ -1,9 +1,6 @@
 #ifndef CARGO_H
 #define CARGO_H
-#include <vector>
 
-#include "Transport.h"
-#include "Container.h"
 #include "../Engineering/Chassis.h"
 #include "../Engineering/Electronics.h"
 #include "../Engineering/Engine.h"
@@ -11,16 +8,11 @@
 #include "../Engineering/Parts.h"
 
 class Cargo {
-public:
+protected:
 	Transport* transport;
 	vector<Parts*> parts;
-	Parts* part;
-	Container* container;
-
-	Cargo(Parts* part){
-		this->part = part;
-	}
-	virtual void pack();
+	
+	virtual void pack(Parts* part);
 	virtual void unpack();
 };
 

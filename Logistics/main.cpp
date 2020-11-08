@@ -8,9 +8,13 @@ int main(){
     //LOGISTICS
     ///*
     Logistics* logistics = new Logistics();
-    logistics->demonstrateIterator();
+    logistics->demonstrateCommand();
     logistics->demonstrateTemplate();
+    logistics->demonstrateChainOfResponsibility();
+    logistics->demonstrateIterator();
+    //delete logistics;
     //*/
 
     return 0;
 }
+

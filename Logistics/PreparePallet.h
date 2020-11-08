@@ -1,17 +1,18 @@
 #ifndef PREPAREPALLET_H
 #define PREPAREPALLET_H
-
-class PackPallet;
+#include "PackPallet.h"
 
 class PreparePallet {
 
 private:
-	PackPallet* command;
+	PackPallet* packCommand;
+	PackPallet* unpackCommand;
 
 public:
-	PreparePallet(PackPallet* command);
+	PreparePallet(PackPallet* pack, PackPallet* unpack);
 	
-	void prepare();
+	void executePack();
+	void executeUnpack();
 };
 
 #endif

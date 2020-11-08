@@ -1,10 +1,10 @@
 #include "Plane.h"
 #include <string>
-using namespace std;
+//using namespace std;
 
 Plane::Plane(): Transport(){
 }
 
-string Plane::getMode() {
+std::string Plane::getMode() {
 	return "chartered plane";
 }

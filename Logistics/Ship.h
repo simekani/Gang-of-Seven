@@ -8,7 +8,7 @@ class Ship : public Transport {
 
 public:
 	Ship();
-	string getMode();
+	std::string getMode();
 };
 
 #endif

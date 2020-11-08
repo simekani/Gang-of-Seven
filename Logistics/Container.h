@@ -1,16 +1,23 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
+#include <vector>
+#include <string>
 
-class Container : Cargo {
+class Container  {
 
 private:
 	Container* next;
-	Vector<string> equipment;
+	const char*  type;
 
 public:
-	void add(Container* container, string type);
+	int numberOfContainers;//protected
 
-	void assemble();
+	Container(const char*  type, int n);
+	void add(Container* next);
+	void handleRequest(int i);
+
+	void pack();
+	void unpack();
 };
 
 #endif

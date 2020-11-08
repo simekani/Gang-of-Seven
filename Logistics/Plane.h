@@ -7,7 +7,7 @@ class Plane : public Transport {
 
 public:
 	Plane();
-	string getMode();
+	std::string getMode();
 };
 
 #endif
