@@ -9,11 +9,6 @@ EngineeringDepartment* EngineeringDepartment::getNext() {
 	return _successor;
 }
 
-Parts* EngineeringDepartment::makeParts() {
-	
-}
-
-
 void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
 	
 }
@@ -26,12 +21,9 @@ void EngineeringDepartment::sendModelToTesting(Car* aModel) {
 	
 }
 
-void EngineeringDepartment::buildpart(vector <float> aSpec, string aName) {
-	
-}
 
 void EngineeringDepartment::recieveSpecs(ComplexSpecs* specs) {
-	buildpart(specs->getSpecDimensions, specs->getDepartmentName);
+	buildpart(specs->getSpecDimensions(), specs->getDepartmentName());
 }
 
 void EngineeringDepartment::assembleCar(Parts* aPart) {

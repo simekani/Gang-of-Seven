@@ -16,6 +16,8 @@ void ChassisDepartment::buildpart(vector <float> aSpec, string aName) {
 			cout << aSpec[i] <<endl;
 		}
 
+		EngineeringDepartment::sendPartToTesting(_parts);
+
 	}else{
 		_successor->buildpart(aSpec, aName);
 	}
