@@ -14,7 +14,7 @@ Aggressive::Aggressive(string StrategyName) {
 
 void Aggressive::strategyBlueprint() {
 	// TODO - implement Aggressive::strategyBlueprint
-	cout<< "The driver will be using Aggressive Race Strategy!"<<endl; 
+	cout<<endl<< "The driver will be using Aggressive Race Strategy!"<<endl; 
 	cout<<Name<<" Aggressive Strategy Blueprint"<<endl; 
 
 	cout<< "This Implies that the "<<numberOfPitstops<<" pitstop strategy will be taken"<<endl;
