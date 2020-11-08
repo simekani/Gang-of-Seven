@@ -10,10 +10,9 @@ class Engine;
 class Engine: public Parts
 {
 
-	public: void getResult();
-		public: string getName(){
-				return "Engine" ;
-			};
+	public: 
+	void getResult(); 
+	string getName();
 	public: void buildPart();
 };
 

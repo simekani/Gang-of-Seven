@@ -29,7 +29,14 @@ int main(){
 
 
 
+
     //Design Team Mediator Testing
+    EngineeringTeam* engineeringDepartment = new EngineDepartment();
+    BoardRoom* DelegationBoardroom = new SpecsBoardroom();
+    DelegationBoardroom->addMember(engineeringDepartment);
+    
+
+
     EngineeringTeam* designTeam = new DesignTeam();
     designTeam->setSpecs(designSpecs);
 
@@ -53,6 +60,11 @@ int main(){
     Electronics->setNext(Aerodynamics);
 
     
+
+
+
+
+    //Mediator 
 
 
     return 0;
