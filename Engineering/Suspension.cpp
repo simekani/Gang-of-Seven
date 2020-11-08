@@ -2,10 +2,10 @@
 #include <string>
 using namespace std;
 
-#include "wheels_and_tyres.h"
+#include "Suspension.h"
 #include "ChassisDepartment.h"
 
-// void wheels_and_tyres::buildpart(float* aSpec, string aName) {
+// void Suspention::buildpart(float* aSpec, string aName) {
 // 	throw "Not yet implemented";
 // }
 

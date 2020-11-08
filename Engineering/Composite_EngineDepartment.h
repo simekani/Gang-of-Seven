@@ -14,16 +14,13 @@ class Composite_EngineDepartment;
 
 class Composite_EngineDepartment: public EngineDepartment
 {
-	private: Engine _children;
-	public: EngineDepartment* _unnamed_EngineDepartment_;
+	private: vector<Engine* > _children;
 
-	public: void buildpart(vector <float* > &specs, string aName);
+	public: void buildpart(vector <float > &specs, string aName);
 
-	public: void add(Engine aParam);
+	public: void add(Engine* aParam);
 
-	public: void remove(Engine aParam);
-
-	public: void getChild(int aParam);
+	public: Engine* getChild(int aParam);
 };
 
 #endif

@@ -1,12 +1,11 @@
 #ifndef ENGINEERINGDEPARTMENT_H
 #define ENGINEERINGDEPARTMENT_H
 
-#include "../Engineering/Car.h"
 #include "EngineeringTeam.h"
-#include "../Engineering/Parts.h"
-#include "../Engineering/Car.h"
-#include "EngineeringTeam.h"
-#include "../Engineering/ComplexSpecs.cpp"
+#include "Parts.h"
+#include "Car.h"
+#include "ComplexSpecs.cpp"
+#include "../Mediator/TestingBoardroom.h"
 
 class Parts;
 class Car;
@@ -18,9 +17,10 @@ using namespace std;
 
 class EngineeringDepartment: public EngineeringTeam
 {
-	private: 
+	protected: 
 		Parts* _parts;
 		EngineeringDepartment* _successor;
+		bool result;
 	public: 
 		Parts* _unnamed_Parts_;
 		void setNext(EngineeringDepartment* aSuccessor);
@@ -30,7 +30,7 @@ class EngineeringDepartment: public EngineeringTeam
 		void sendPartToTesting(Parts* aPart);
 		void receiveResult(bool aResult);
 		void sendModelToTesting(Car* aModel);
-		void buildpart(float* Spec, string Name);
+		virtual void buildpart(vector <float> Spec, string Name);
 		void recieveSpecs(ComplexSpecs* specs);
 		void assembleCar(Parts* aPart);
 };

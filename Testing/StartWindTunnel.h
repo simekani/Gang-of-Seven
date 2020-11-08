@@ -13,6 +13,7 @@ class StartWindTunnel : public Command {
     public:
 
         StartWindTunnel(WindTunnel* tunnel);
+        void setCarModel(Car* modelCar);
         void execute();
 };
 
