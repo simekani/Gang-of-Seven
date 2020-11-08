@@ -21,15 +21,15 @@ void EngineDepartment::buildpart(vector <float* > &specs, string aName) {
 	}
 }
 
-void EngineDepartment::add(Engine aParam) {
-	throw "Not yet implemented";
-}
+// void EngineDepartment::add(Engine aParam) {
+// 	throw "Not yet implemented";
+// }
 
-void EngineDepartment::remove(Engine aParam) {
-	throw "Not yet implemented";
-}
+// void EngineDepartment::remove(Engine aParam) {
+// 	throw "Not yet implemented";
+// }
 
-void EngineDepartment::getChild(int aParam) {
-	throw "Not yet implemented";
-}
+// void EngineDepartment::getChild(int aParam) {
+// 	throw "Not yet implemented";
+// }
 

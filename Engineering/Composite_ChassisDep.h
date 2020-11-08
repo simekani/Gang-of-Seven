@@ -12,16 +12,13 @@ class Composite_ChassisDep;
 
 class Composite_ChassisDep: public ChassisDepartment
 {
-	private: ChassisDepartment _children;
-	public: ChassisDepartment* _unnamed_ChassisDepartment_;
+	private: vector <ChassisDepartment*> _children;
 
-	public: void buildpart(float* aSpec, string aName);
+	public: void buildpart(vector <float*> aSpec, string aName);
 
-	public: void add(chassisDepartment aParam);
+	public: void add(ChassisDepartment* aParam);
 
-	public: void remove(ChassisDepartment aParam);
-
-	public: void getChild(int aParam);
+	public: ChassisDepartment* getChild(int aParam);
 };
 
 #endif

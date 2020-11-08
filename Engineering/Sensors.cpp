@@ -5,7 +5,8 @@ using namespace std;
 #include "Sensors.h"
 #include "ElectronicsDepartment.h"
 
-void Sensors::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+void Sensors::buildpart(vector <float*> aSpec, string aName) {
+	cout <<"installing the Sensors"<<endl;
+	ElectronicsDepartment::buildpart(aSpec, aName);
 }
 
