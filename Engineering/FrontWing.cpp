@@ -3,7 +3,7 @@
 using namespace std;
 
 #include "FrontWing.h"
-#include "AreodynamicsDepartment.h"
+#include "AerodynamicsDepartment.h"
 #include "Front.h"
 
 void FrontWing::buildpart(vector <float > &specs, string aName) {

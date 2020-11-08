@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __ElectronicsDepartment_h__
 #define __ElectronicsDepartment_h__
 
-// #include "Composite_ElectronicsDepartment.h"
+#include "Composite_ElectronicsDepartment.h"
 #include "EngineeringDepartment.h"
 
 // class Composite_ElectronicsDepartment;

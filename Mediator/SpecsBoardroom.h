@@ -4,7 +4,7 @@ using namespace std;
 #define SPECSBOARDROOM_H
 
 #include "EngineeringTeam.h"
-#include "EngineeringDepartment.h"
+#include "../Engineering/EngineeringDepartment.h"
 #include "BoardRoom.h"
 
 class SpecsBoardroom: public BoardRoom
