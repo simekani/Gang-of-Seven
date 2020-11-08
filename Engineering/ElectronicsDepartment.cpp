@@ -18,6 +18,8 @@ void ElectronicsDepartment::buildpart(vector <float> aSpec, string aName) {
 		result = false;
 		while(!result)
 			EngineeringDepartment::sendPartToTesting(_parts);
+
+		_Car->pushParts(_parts);
 	}else{
 		_successor->buildpart(aSpec, aName);
 	}

@@ -18,6 +18,8 @@ void RearWing::buildpart(vector <float > &specs, string aName) {
 		while(!result)
 			EngineeringDepartment::sendPartToTesting(_parts);
 
+		_Car->pushParts(_parts);	
+
 	}else{
 		_successor->buildpart( specs, aName);
 	}
