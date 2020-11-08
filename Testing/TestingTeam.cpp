@@ -1,7 +1,8 @@
 #include "TestingTeam.h"
 
 void TestingTeam::sendMessage(bool result) {
-	// TODO - implement TestingTeam::sendMessage	
+	// TODO - implement TestingTeam::sendMessage
+	tBoardRoom->recieveTestResult(result); 	
 }
 
 void TestingTeam::receiveMessage(Parts* part) {

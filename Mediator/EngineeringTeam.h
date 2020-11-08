@@ -23,7 +23,7 @@ class EngineeringTeam{
 		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);
 		virtual void recieveMessage(Parts* part) ;// for testing team 
-
+		virtual void recieveTestResult(bool); 
 		virtual void recieveMessage(Car* model) ; // for testing team 
 };
 
