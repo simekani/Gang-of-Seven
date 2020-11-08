@@ -6,7 +6,7 @@ PartSimulator::PartSimulator() {
     this->part = NULL;
 }
 
-void PartSimulator::setPart(Part* part) {
+void PartSimulator::setPart(Parts* part) {
     
     this->part = part;
 }

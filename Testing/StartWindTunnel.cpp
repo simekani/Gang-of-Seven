@@ -5,8 +5,12 @@ StartWindTunnel::StartWindTunnel(WindTunnel* tunnel) {
     this->tunnel = tunnel;
 }
 
-void StartWindTunnel::execute(Car* CarModel) {
+void StartWindTunnel::setCarModel(Car* modelCar) {
+    
+    tunnel->setCarModel(modelCar);
+}
 
-    tunnel->setCarModel(CarModel);
+void StartWindTunnel::execute() {
+
     tunnel->run();
 }

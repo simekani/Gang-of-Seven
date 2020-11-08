@@ -10,11 +10,15 @@ using namespace std;
 #include "../Engineering/Driver.h"
 #include "TestingBoardroom.h"
 
-class EngineeringTeam{
+class EngineeringTeam {
+
 	protected: 
+
 		SpecsBoardroom* _sendSpecs;
 		TestingBoardroom* tBoardRoom; 
+
 	public:
+
 		Car* _Car;
 		Driver* _Driver;
 		
@@ -23,7 +27,6 @@ class EngineeringTeam{
 		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);
 		virtual void recieveMessage(Parts* part) ;// for testing team 
-
 		virtual void recieveMessage(Car* model) ; // for testing team 
 };
 

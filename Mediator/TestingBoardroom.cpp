@@ -1,16 +1,45 @@
 #include "TestingBoardroom.h"
 #include "../Testing/TestingTeam.h"
+#include "EngineeringDepartment.h"
+
 TestingBoardroom::TestingBoardroom() {
-	// TODO - implement TestingBoardroom::TestingBoardroom
-	participants[0] = new TestingTeam(); 
+	
+	EngineeringTeam* TestingDepartment = new TestingTeam();
+ 
+	participants.push_back(TestingDepartment);
+}
+
+TestingBoardroom::~TestingBoardroom() {
+    
+}
+
+TestingBoardroom* TestingBoardroom::getInstance() {
+    
+	if (instance == NULL)
+		instance = new TestingBoardroom();
+
+	return instance;
 }
 
 void TestingBoardroom::relayModel(Car* model) {
-	// TODO - implement TestingBoardroom::relayModel
-	participants[0]->recieveMessage(model); 
+	
+	vector<EngineeringTeam*>::iterator it = participants.begin();
+
+	static_cast<TestingTeam*>(*it)->recieveMessage(model);
 }
 
 void TestingBoardroom::relayPart(Parts* part) {
-	// TODO - implement TestingBoardroom::relayPart
-	participants[0]->recieveMessage(part); 
+	
+	vector<EngineeringTeam*>::iterator it = participants.begin();
+
+	static_cast<TestingTeam*>(*it)->receiveMessage(part);
+}
+
+void TestingBoardroom::relayResult(bool result) {
+    
+	vector<EngineeringTeam*>::iterator it = participants.begin();
+
+	++it;
+
+	static_cast<EngineeringDepartment*>(*it)->receiveResult(result);
 }

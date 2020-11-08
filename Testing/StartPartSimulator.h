@@ -5,7 +5,7 @@
 #include "Simulator.h"
 #include "../Engineering/Parts.h"
 
-class StartSimulator : public Simulator {
+class StartPartSimulator : public Command {
 
     private:
 
@@ -14,7 +14,7 @@ class StartSimulator : public Simulator {
 
     public:
 
-        StartSimulator(Simulator* simulator);
+        StartPartSimulator(Simulator* simulator);
         void setPart(Parts* part);
         void execute();
 };
