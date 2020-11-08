@@ -1,9 +1,4 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "CompositeAerodynamicsDepartment.h"
-#include "AerodynamicsDepartment.h"
 
 void CompositeAerodynamicsDepartment::buildpart(vector <float > &specs, string aName) {
 	
