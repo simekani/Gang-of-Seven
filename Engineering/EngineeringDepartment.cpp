@@ -2,20 +2,17 @@
 
 
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
-	
+	this->_successor = aSuccessor;
 }
 
 EngineeringDepartment* EngineeringDepartment::getNext() {
-	
+	return _successor;
 }
 
 Parts* EngineeringDepartment::makeParts() {
 	
 }
 
-void EngineeringDepartment::sendToTesting() {
-	
-}
 
 void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
 	
@@ -29,12 +26,12 @@ void EngineeringDepartment::sendModelToTesting(Car* aModel) {
 	
 }
 
-void EngineeringDepartment::buildpart(float* aSpec, string aName) {
+void EngineeringDepartment::buildpart(vector <float> aSpec, string aName) {
 	
 }
 
 void EngineeringDepartment::recieveSpecs(ComplexSpecs* specs) {
-	
+	buildpart(specs->getSpecDimensions, specs->getDepartmentName);
 }
 
 void EngineeringDepartment::assembleCar(Parts* aPart) {

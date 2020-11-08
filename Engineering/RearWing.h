@@ -9,7 +9,7 @@ using namespace std;
 
 class RearWing: public AreodynamicsDepartment
 {
-	public: void buildpart(vector <float* > &specs, string aName);
+	public: void buildpart(vector <float > &specs, string aName);
 	
 };
 

@@ -16,7 +16,7 @@ class CompositeAreodynamicDepartment: public AreodynamicsDepartment
 
 	public: AreodynamicsDepartment* _unnamed_AreodynamicsDepartment_;
 
-	public: void buildpart(vector <float* > &specs, string aName);
+	public: void buildpart(vector <float > &specs, string aName);
 
 	public: void add(AreodynamicsDepartment* department);
 
@@ -28,7 +28,7 @@ class CompositeAreodynamicDepartment: public AreodynamicsDepartment
 
 /* 
 
-void RearWing::buildpart(vector <float* > &specs, string aName) {
+void RearWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){
 		_parts = new Rear();
 		_parts->buildPart();

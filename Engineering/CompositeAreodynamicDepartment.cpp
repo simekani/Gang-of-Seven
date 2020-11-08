@@ -5,7 +5,7 @@ using namespace std;
 #include "CompositeAreodynamicDepartment.h"
 #include "AreodynamicsDepartment.h"
 
-void CompositeAreodynamicDepartment::buildpart(vector <float* > &specs, string aName) {
+void CompositeAreodynamicDepartment::buildpart(vector <float > &specs, string aName) {
 	throw "Not yet implemented";
 }
 

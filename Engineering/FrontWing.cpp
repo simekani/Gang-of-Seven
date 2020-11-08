@@ -6,7 +6,7 @@ using namespace std;
 #include "AreodynamicsDepartment.h"
 #include "Front.h"
 
-void FrontWing::buildpart(vector <float* > &specs, string aName) {
+void FrontWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){
 		_parts = new Front();
 		_parts->buildPart();
