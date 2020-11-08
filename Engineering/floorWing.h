@@ -1,4 +1,4 @@
-#include <exception>
+#include <vector>
 #include <string>
 using namespace std;
 
@@ -6,7 +6,7 @@ using namespace std;
 #define __floorWing_h__
 
 #include "AerodynamicsDepartment.h"
-
+#include "Floor.h"
 
 class floorWing: public AerodynamicsDepartment
 {

@@ -5,6 +5,8 @@
 #include "Parts.h"
 using namespace std;
 
+class Parts;
+
 class Wings: public Parts
 {
 

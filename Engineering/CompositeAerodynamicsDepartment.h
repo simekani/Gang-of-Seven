@@ -8,7 +8,7 @@ using namespace std;
 #include "AerodynamicsDepartment.h"
 
 // class AerodynamicsDepartment;
-class CompositeAerodynamicsDepartment;
+//class CompositeAerodynamicsDepartment;
 
 class CompositeAerodynamicsDepartment: public AerodynamicsDepartment
 {
