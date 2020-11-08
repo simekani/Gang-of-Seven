@@ -1,13 +1,10 @@
-#include <exception>
-using namespace std;
-
 #ifndef ENGINEERINGTEAM_H
 #define ENGINEERINGTEAM_H
 
 #include "SpecsBoardroom.h"
-#include "ComplexSpecs.cpp"
-#include "Car.h"
-#include "Driver.h"
+#include "../Engineering/ComplexSpecs.cpp"
+#include "../Engineering/Car.h"
+#include "../Engineering/Driver.h"
 #include "TestingBoardroom.h"
 
 class EngineeringTeam{
