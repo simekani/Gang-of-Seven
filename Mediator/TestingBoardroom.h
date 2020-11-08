@@ -1,15 +1,24 @@
 #ifndef TESTINGBOARDROOM_H
 #define TESTINGBOARDROOM_H
 
-class TestingBoardroom : BoardRoom {
+#include "BoardRoom.h"
 
+//Receive result from EDept. needs to be implemented in order to test
 
-public:
-	TestingBoardroom();
+class TestingBoardroom : public BoardRoom {
 
-	void relayModel(Car* model);
+	private:
 
-	void relayPart(Part* part);
+		static TestingBoardroom* instance;
+
+	public:
+
+		TestingBoardroom();
+		~TestingBoardroom();
+		static TestingBoardroom* getInstance();
+		void relayModel(Car* model);
+		void relayPart(Parts* part);
+		void relayResult(bool result);
 };
 
 #endif

@@ -1,8 +1,7 @@
+#ifndef DRIVER_H
+#define DRIVER_H
 
-#ifndef __Driver_h__
-#define __Driver_h__
-
-// #include "EngineeringTeam.h"
+#include "../Mediator/EngineeringTeam.h"
 
 class EngineeringTeam;
 class Driver;
@@ -10,7 +9,7 @@ class Driver;
 class Driver
 {
 	private: string _attribute;
-	public: EngineeringTeam* _unnamed_EngineeringTeam_;
+	public: EngineeringTeam* _EngineeringTeam_;
 };
 
 #endif

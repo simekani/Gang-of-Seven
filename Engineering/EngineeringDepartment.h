@@ -1,43 +1,38 @@
-#include <exception>
-#include <string>
-#include <typeinfo>
-using namespace std;
+#ifndef ENGINEERINGDEPARTMENT_H
+#define ENGINEERINGDEPARTMENT_H
 
-#ifndef __EngineeringDepartment_h__
-#define __EngineeringDepartment_h__
-
+#include "EngineeringTeam.h"
 #include "Parts.h"
 #include "Car.h"
-#include "EngineeringTeam.h"
+#include "ComplexSpecs.cpp"
+#include "../Mediator/TestingBoardroom.h"
+
+class Parts;
+class Car;
+class EngineeringTeam;
+class EngineeringDepartment;
+
+#include <string>
+using namespace std;
 
 class EngineeringDepartment: public EngineeringTeam
 {
-	public : Parts* _parts;
-
-	public: EngineeringDepartment* _successor;
-
-	public: Parts* _unnamed_Parts_;
-
-	public: void setNext(EngineeringDepartment* aSuccessor);
-
-	public: EngineeringDepartment* getNext();
-
-	public: Parts* makeParts();
-
-	public: void sendToTesting();
-
-	public: void sendPartToTesting(Parts* aPart);
-
-	public: void receiveResult(bool aResult);
-
-	public: void sendModelToTesting(Car* aModel);
-
-	public: virtual void buildpart(vector <float*> aSpec, string aName);
-
-	public: void recieveSpecs(vector <float*> aSpec, string aName);
-
-	public: void assembleCar(Parts* aPart);
-
-	public: void setSuccessor(EngineeringDepartment* _successor);
+	protected: 
+		Parts* _parts;
+		EngineeringDepartment* _successor;
+		bool result;
+	public: 
+		Parts* _unnamed_Parts_;
+		void setNext(EngineeringDepartment* aSuccessor);
+		EngineeringDepartment* getNext();
+		Parts* makeParts();
+		void sendToTesting();
+		void sendPartToTesting(Parts* aPart);
+		void receiveResult(bool aResult);
+		void sendModelToTesting(Car* aModel);
+		virtual void buildpart(vector <float> Spec, string Name);
+		void recieveSpecs(ComplexSpecs* specs);
+		void assembleCar(Parts* aPart);
 };
+
 #endif

@@ -1,52 +1,35 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "EngineeringDepartment.h"
-#include "Parts.h"
-#include "Car.h"
-#include "EngineeringTeam.h"
 
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
-	throw "Not yet implemented";
+	this->_successor = aSuccessor;
 }
 
-EngineerDepartment* EngineeringDepartment::getNext() {
-	throw "Not yet implemented";
+EngineeringDepartment* EngineeringDepartment::getNext() {
+	return _successor;
 }
 
-Parts* EngineeringDepartment::makeParts() {
-	throw "Not yet implemented";
-}
+void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
+	
+	TestingBoardroom::getInstance()->relayPart(aPart);
 
-void EngineeringDepartment::sendToTesting() {
-	throw "Not yet implemented";
-}
-
-void EngineeringDepartment::sendPartToTesting(Part* aPart) {
-	throw "Not yet implemented";
 }
 
 void EngineeringDepartment::receiveResult(bool aResult) {
-	throw "Not yet implemented";
+	result = aResult;
 }
 
 void EngineeringDepartment::sendModelToTesting(Car* aModel) {
-	throw "Not yet implemented";
+
+	TestingBoardroom::getInstance()->relayModel(aModel);
+	
 }
 
-void EngineeringDepartment::buildpart(vector <float*> aSpec, string aName) {
-	throw "Not yet implemented";
-}
 
-void EngineeringDepartment::recieveSpecs(vector <float*> aSpec, string aName) {
-	throw "Not yet implemented";
+void EngineeringDepartment::recieveSpecs(ComplexSpecs* specs) {
+	buildpart(specs->getSpecDimensions(), specs->getDepartmentName());
 }
 
 void EngineeringDepartment::assembleCar(Parts* aPart) {
-	throw "Not yet implemented";
+	
 }
 
-void EngineeringDepartment::setSuccessor(EngineeringDepartment* _successor){
-	this->_successor = _successor;
-}

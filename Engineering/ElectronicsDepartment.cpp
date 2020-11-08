@@ -7,7 +7,7 @@ using namespace std;
 #include "EngineeringDepartment.h"
 #include "Engine.h";
 
-void ElectronicsDepartment::buildpart(vector <float*> aSpec, string aName) {
+void ElectronicsDepartment::buildpart(vector <float> aSpec, string aName) {
 		if(aName == "Engine"){
 		_parts = new Engine();
 		_parts->buildPart();
@@ -15,7 +15,11 @@ void ElectronicsDepartment::buildpart(vector <float*> aSpec, string aName) {
 		for(int i = 0; i < aSpec.size(); i++){
 			cout << aSpec[i] <<endl;
 		}
+		result = false;
+		while(!result)
+			EngineeringDepartment::sendPartToTesting(_parts);
 
+		_Car->pushParts(_parts);
 	}else{
 		_successor->buildpart(aSpec, aName);
 	}

@@ -14,7 +14,7 @@ class Composite_ElectronicsDepartment: public ElectronicsDepartment
 {
 	public: vector <ElectronicsDepartment* > _children;
 
-	public: void buildpart(vector <float* > specs, string aName);
+	public: void buildpart(vector <float > &specs, string aName);
 
 	public: void add(ElectronicsDepartment*  aParam);
 

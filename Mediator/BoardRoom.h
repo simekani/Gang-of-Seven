@@ -1,17 +1,17 @@
 #ifndef BOARDROOM_H
 #define BOARDROOM_H
 
+#include "EngineeringTeam.h"
+using namespace std;
+
 class BoardRoom {
 
-private:
-	vector<EngineeringTeam*> participants;
+	protected:
+		vector<EngineeringTeam*> participants;
 
-public:
-	BoardRoom();
-
-	void addMember(EngineeringTeam* ETeam);
-
-	void leave(int member);
+	public:
+		BoardRoom();
+		void addMember(EngineeringTeam* eTeam);
 };
 
 #endif

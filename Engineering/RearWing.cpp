@@ -3,10 +3,9 @@
 using namespace std;
 
 #include "RearWing.h"
-#include "AreodynamicsDepartment.h"
 #include "Rear.h"
 
-void RearWing::buildpart(vector <float* > &specs, string aName) {
+void RearWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){
 		_parts = new Rear();
 		_parts->buildPart();
@@ -14,6 +13,12 @@ void RearWing::buildpart(vector <float* > &specs, string aName) {
 		for(int i = 0; i < specs.size(); i++){
 			cout << specs[i] <<endl;
 		}
+		result = false;
+		while(!result)
+			EngineeringDepartment::sendPartToTesting(_parts);
+
+		_Car->pushParts(_parts);	
+
 	}else{
 		_successor->buildpart( specs, aName);
 	}
