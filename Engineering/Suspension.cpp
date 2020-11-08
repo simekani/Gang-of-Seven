@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-#include "Suspention.h"
+#include "Suspension.h"
 #include "ChassisDepartment.h"
 
 // void Suspention::buildpart(float* aSpec, string aName) {

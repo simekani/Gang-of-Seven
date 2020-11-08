@@ -1,5 +1,5 @@
 #include "EngineeringTeam.h"
 
-void EngineeringTeam::changed() {
+void EngineeringTeam::receivedDesignSpecs() {
 	_sendSpecs->relayDimensions(this);
 }

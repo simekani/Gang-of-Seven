@@ -5,10 +5,10 @@ using namespace std;
 #ifndef __floorWing_h__
 #define __floorWing_h__
 
-#include "AreodynamicsDepartment.h"
+#include "AerodynamicsDepartment.h"
 
 
-class floorWing: public AreodynamicsDepartment
+class floorWing: public AerodynamicsDepartment
 {
 	public: void buildpart(vector <float > &specs, string aName);
 	

@@ -3,7 +3,6 @@
 using namespace std;
 
 #include "RearWing.h"
-#include "AreodynamicsDepartment.h"
 #include "Rear.h"
 
 void RearWing::buildpart(vector <float > &specs, string aName) {

@@ -5,12 +5,12 @@ using namespace std;
 #ifndef __FrontWing_h__
 #define __FrontWing_h__
 
-#include "AreodynamicsDepartment.h"
+#include "AerodynamicsDepartment.h"
 
 // class AreodynamicsDepartment;
 class FrontWing;
 
-class FrontWing: public AreodynamicsDepartment
+class FrontWing: public AerodynamicsDepartment
 {
 	public: void buildpart(vector <float > &specs, string aName);
 	

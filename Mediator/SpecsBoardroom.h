@@ -1,14 +1,11 @@
-#include <exception>
 using namespace std;
 
 #ifndef SPECSBOARDROOM_H
 #define SPECSBOARDROOM_H
 
 #include "EngineeringTeam.h"
+#include "../Engineering/EngineeringDepartment.h"
 #include "BoardRoom.h"
-
-class EngineeringTeam;
-class BoardRoom;
 
 class SpecsBoardroom: public BoardRoom
 {
