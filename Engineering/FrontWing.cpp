@@ -6,7 +6,7 @@ using namespace std;
 #include "AreodynamicsDepartment.h"
 #include "Front.h"
 
-void FrontWing::buildpart(vector <float* > &specs, string aName) {
+void FrontWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){
 		_parts = new Front();
 		_parts->buildPart();
@@ -14,6 +14,10 @@ void FrontWing::buildpart(vector <float* > &specs, string aName) {
 		for(int i = 0; i < specs.size(); i++){
 			cout << specs[i] <<endl;
 		}
+		
+		result = false;
+		while(!result)
+			EngineeringDepartment::sendPartToTesting(_parts);
 	}else{
 		_successor->buildpart( specs, aName);
 	}

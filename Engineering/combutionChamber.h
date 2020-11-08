@@ -13,7 +13,7 @@ class combutionChamber;
 class combutionChamber: public EngineDepartment
 {
 
-	public: void buildpart(vector <float* > &specs, string aName);
+	public: void buildpart(vector <float > &specs, string aName);
 };
 
 #endif

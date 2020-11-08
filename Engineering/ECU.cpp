@@ -5,7 +5,8 @@ using namespace std;
 #include "ECU.h"
 #include "ElectronicsDepartment.h"
 
-void ECU::buildpart(float* aSpec, string aName) {
-	throw "Not yet implemented";
+void ECU::buildpart(vector <float> aSpec, string aName) {
+		cout <<"installing the ECU"<<endl;
+	ElectronicsDepartment::buildpart(aSpec, aName);
 }
 

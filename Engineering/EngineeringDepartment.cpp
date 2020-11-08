@@ -1,40 +1,30 @@
 #include "EngineeringDepartment.h"
 
 
+
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
-	
+	this->_successor = aSuccessor;
 }
 
 EngineeringDepartment* EngineeringDepartment::getNext() {
-	
-}
-
-Parts* EngineeringDepartment::makeParts() {
-	
-}
-
-void EngineeringDepartment::sendToTesting() {
-	
+	return _successor;
 }
 
 void EngineeringDepartment::sendPartToTesting(Parts* aPart) {
-	
+	//TestingBoardroom::relayPart(aPart);
 }
 
 void EngineeringDepartment::receiveResult(bool aResult) {
-	
+	result = aResult;
 }
 
 void EngineeringDepartment::sendModelToTesting(Car* aModel) {
-	
+	//TestingBoardroom::relayCar(aModel);
 }
 
-void EngineeringDepartment::buildpart(float* aSpec, string aName) {
-	
-}
 
 void EngineeringDepartment::recieveSpecs(ComplexSpecs* specs) {
-	
+	buildpart(specs->getSpecDimensions(), specs->getDepartmentName());
 }
 
 void EngineeringDepartment::assembleCar(Parts* aPart) {

@@ -8,11 +8,11 @@ using namespace std;
 
 class AreodynamicsDepartment: public EngineeringDepartment
 {
-	public: virtual void buildpart(vector <float* > &specs, string aName) = 0;
+	public: virtual void buildpart(vector <float > &specs, string aName) ;
 
-	public: virtual void add(AreodynamicsDepartment* department) = 0;
+	public: virtual void add(AreodynamicsDepartment* department) ;
 
-	public: virtual AreodynamicsDepartment* getChild(int aParam) = 0;
+	public: virtual AreodynamicsDepartment* getChild(int aParam);
 };
 
 #endif
