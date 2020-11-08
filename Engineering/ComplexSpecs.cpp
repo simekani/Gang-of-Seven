@@ -2,6 +2,8 @@
 #define COMPLEXSPECS_H
 
 #include <vector> 
+#include <iostream>
+#include <string>
 using namespace std;
 
 class ComplexSpecs

@@ -18,7 +18,7 @@ class ChassisDepartment: public EngineeringDepartment
 {
 	public: Composite_ChassisDep* _unnamed_Composite_ChassisDep_;
 
-	public: void buildpart(vector <float*> aSpec, string aName);
+	public: void buildpart(vector <float> aSpec, string aName);
 
 	public: void add(Engine aParam);
 

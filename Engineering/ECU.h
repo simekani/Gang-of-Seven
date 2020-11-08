@@ -13,7 +13,7 @@ class ECU;
 class ECU: public ElectronicsDepartment
 {
 
-	public: void buildpart(vector <float*> aSpec, string aName);
+	public: void buildpart(vector <float> aSpec, string aName);
 };
 
 #endif

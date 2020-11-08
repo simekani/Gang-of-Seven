@@ -2,9 +2,10 @@
 #define BOARDROOM_H
 
 #include "EngineeringTeam.h"
-
 using namespace std;
+
 class BoardRoom {
+
 	protected:
 		vector<EngineeringTeam*> participants;
 
