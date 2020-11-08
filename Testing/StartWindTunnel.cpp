@@ -14,3 +14,8 @@ void StartWindTunnel::execute() {
 
     tunnel->run();
 }
+
+bool StartWindTunnel::isUsable() const {
+
+    return this->tunnel->hasTokens();    
+}

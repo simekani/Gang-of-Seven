@@ -3,6 +3,8 @@
 #include "StartPartSimulator.h"
 #include "StartWindTunnel.h"
 #include "PartSimulator.h"
+#include "CarSimulator.h"
+#include "StartCarSimulator.h"
 
 TestingTeam::TestingTeam() {
     
@@ -12,7 +14,18 @@ TestingTeam::TestingTeam() {
 
 	Simulator* partSimulator = new PartSimulator();
 
-	startSimulator = new StartPartSimulator(partSimulator);
+	startPartSimulator = new StartPartSimulator(partSimulator);
+
+	Simulator* carSimulator = new CarSimulator();
+
+	startCarSimulator = new StartCarSimulator(carSimulator);
+}
+
+TestingTeam::~TestingTeam() {
+    
+	delete startWindTunnel;
+	delete startCarSimulator;
+	delete startPartSimulator;
 }
 
 void TestingTeam::sendMessage(bool result) {
@@ -23,25 +36,42 @@ void TestingTeam::sendMessage(bool result) {
 void TestingTeam::receiveMessage(Parts* part) {
 	
 		simulatePartPerformance(part); 	
-		bool result = startSimulator->getResult();
+		bool result = startPartSimulator->getResult();
 		sendMessage(result);
 }
 
 void TestingTeam::recieveMessage(Car* model) {
 	
-		testCarModel(model); 
-		bool result = startWindTunnel->getResult();
-		sendMessage(result);
+	testCarModel(model); 
+	
+	bool result;
+
+	if (testNamePerformed == "wind-tunnel")
+		result = startWindTunnel->getResult();
+	else
+		result = startCarSimulator->getResult();
+	
+	sendMessage(result);	
 }
 
 void TestingTeam::testCarModel(Car* model) {
 	
-	static_cast<StartWindTunnel*>(startWindTunnel)->setCarModel(model);
-	static_cast<StartWindTunnel*>(startWindTunnel)->execute();
+	if (static_cast<StartWindTunnel*>(startWindTunnel)->isUsable() == true) {
+
+		this->testNamePerformed = "wind-tunnel";
+		static_cast<StartWindTunnel*>(startWindTunnel)->setCarModel(model);
+		static_cast<StartWindTunnel*>(startWindTunnel)->execute();
+	}
+	else
+	{
+		this->testNamePerformed = "car-simulate";
+		static_cast<StartCarSimulator*>(startCarSimulator)->setCarModel(model);
+		static_cast<StartCarSimulator*>(startCarSimulator)->execute();
+	}
 }
 
 void TestingTeam::simulatePartPerformance(Parts* part) {
 	
-	static_cast<StartPartSimulator*>(startSimulator)->setPart(part);
-	static_cast<StartPartSimulator*>(startSimulator)->execute();
+	static_cast<StartPartSimulator*>(startPartSimulator)->setPart(part);
+	static_cast<StartPartSimulator*>(startPartSimulator)->execute();
 }
