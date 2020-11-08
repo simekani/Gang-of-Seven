@@ -1,7 +1,5 @@
 #include "EngineeringDepartment.h"
 
-
-
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
 	this->_successor = aSuccessor;
 }
