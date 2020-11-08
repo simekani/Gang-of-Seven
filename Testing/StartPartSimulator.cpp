@@ -8,7 +8,6 @@ StartPartSimulator::StartPartSimulator(Simulator* simualtor) {
 
 void StartPartSimulator::setPart(Parts* part) {
     
-    this->part = part;
     static_cast<PartSimulator*>(simulator)->setPart(part);
 }
 
