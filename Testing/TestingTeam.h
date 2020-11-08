@@ -3,7 +3,8 @@
 #include "../Mediator/EngineeringTeam.h"
 #include "../Engineering/Parts.h"
 
-class TestingTeam : EngineeringTeam {
+
+class TestingTeam : public EngineeringTeam {
 
 private:
 	Command* startWindTunnel;

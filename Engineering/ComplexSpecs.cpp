@@ -1,7 +1,7 @@
 #ifndef COMPLEXSPECS_H
 #define COMPLEXSPECS_H
 
-#include <bits/stdc++.h> 
+#include <vector> 
 using namespace std;
 
 class ComplexSpecs
