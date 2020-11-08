@@ -22,7 +22,7 @@ class EngineeringTeam {
 		Car* _Car;
 		Driver* _Driver;
 		
-		void changed();
+		void receivedDesignSpecs();
 		virtual ComplexSpecs* getSpecs();
 		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);
