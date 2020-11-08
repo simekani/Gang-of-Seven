@@ -20,6 +20,8 @@ void ChassisDepartment::buildpart(vector <float> aSpec, string aName) {
 		while(!result)
 			EngineeringDepartment::sendPartToTesting(_parts);
 
+		_Car->pushParts(_parts);
+
 	}else{
 		_successor->buildpart(aSpec, aName);
 	}
