@@ -24,6 +24,10 @@ int main(){
 
     //Car Specifications From Design Team
     ComplexSpecs* designSpecs = new ComplexSpecs();
+    //promt for design specs
+
+
+
 
     //Design Team Mediator Testing
     EngineeringTeam* designTeam = new DesignTeam();
@@ -41,6 +45,15 @@ int main(){
     ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(rearWing);
     ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(FloorWing);
     ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(frontWing);
+
+    //Engineering department , chain of responsibilities
+    Aerodynamics->setNext(Engine);
+    Engine->setNext(Chassis);
+    Chassis->setNext(Electronics);
+    Electronics->setNext(Aerodynamics);
+
+    
+
 
     return 0;
 }
