@@ -1,0 +1,41 @@
+#ifndef PACKPALLET_H
+#define PACKPALLET_H
+
+//#include ".h"
+
+
+//Command: Receivers, Commands, Invoker
+#include "PriorityPallet.h"
+#include "NonPriorityPallet.h"
+
+#include "UnpackNonPriorityPallet.h"
+#include "PackNonPriorityPallet.h"
+#include "UnpackPriorityPallet.h"
+#include "PackPriorityPallet.h"
+
+#include "PreparePallet.h"
+
+//Iterator
+#include "Warehouse.h" //already includes "Iterator.h", "PartIterator.h"
+
+//Template
+#include "Ship.h"
+#include "Truck.h"
+#include "Plane.h"
+
+class Patterns{
+
+public:
+    Patterns();
+
+    void demonstrateChainOfResponsibility();
+
+    void demonstrateCommand();
+
+	void demonstrateIterator();
+
+    void demonstrateTemplate();
+
+};
+
+#endif
