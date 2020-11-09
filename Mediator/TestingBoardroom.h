@@ -10,10 +10,10 @@ class TestingBoardroom : public BoardRoom {
 	private:
 
 		static TestingBoardroom* instance;
+		TestingBoardroom();
 
 	public:
 
-		TestingBoardroom();
 		~TestingBoardroom();
 		static TestingBoardroom* getInstance();
 		void relayModel(Car* model);
