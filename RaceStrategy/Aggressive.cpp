@@ -24,5 +24,5 @@ void Aggressive::strategyBlueprint() {
 
 
 	cout<< "The Aggressive Strategy is highly succesfull when there is a safe car"<<endl; 
-	cout<< "The Aggressive Strategy could fail if pitstops take too long"<<endl; 
+	cout<< "The Aggressive Strategy could fail if pitstops take too long"<<endl<<endl; 
 }

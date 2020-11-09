@@ -16,7 +16,7 @@
 // #include "Engineering/RearWing.h"
 // #include "Engineering/FrontWing.h"
 // #include "Engineering/floorWing.h"
-
+#include <stdlib.h>
 #include "RaceStrategy/RaceStrategyDepartment.h" 
 
 #include <iostream>
@@ -25,7 +25,7 @@ using namespace std;
 
 int main(){
 
-        bool season = false; 
+    bool season = false; 
 
     while (true)
     {
@@ -40,7 +40,7 @@ int main(){
 
             if(y==0)
             {
-              exit(); 
+              exit(0); 
             }
 
            else if(y==1)
@@ -62,9 +62,9 @@ int main(){
 
                 switch(val)
                 {
-                    case 0: exit(); 
+                    case 0: exit(0); 
                     case 1: 
-                    // simekani Main
+                        // simekani Main
                     break; 
 
                     case 2: 
@@ -90,7 +90,6 @@ int main(){
                 season = false; 
                   
             }
-
         }
 
         else
@@ -99,9 +98,7 @@ int main(){
             // team - Cars
             // Cars - Race strategy , eng dept, 
             cout<<"Welcome to F1!"<<endl; 
-            string name; 
-            cout<< "Enter strategy name"<<endl;   
-            cin>> name;
+            cout<<"Create a Team"<<endl; 
 
             int strategyPack; 
             cout<<endl<< "Choose strategy Pack"<<endl
@@ -111,11 +108,15 @@ int main(){
             cout<<"0. quit"<<endl<<endl; 
             cin>>strategyPack; 
 
+            string name; 
+            cout<< "Enter strategy name"<<endl;   
+            cin>> name;
+
             string pack = "Aggressive"; 
 
             switch(strategyPack)
             {
-                case 0: exit(); 
+                case 0: exit(0); break; 
                 case 1: pack = "Defensive" ;    break; 
                 case 2: pack = "Moderate" ;     break; 
                 case 3: pack = "Aggressive" ;   break; 

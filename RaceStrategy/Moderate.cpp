@@ -21,14 +21,14 @@ void Moderate::strategyBlueprint() {
 	cout<<endl<< "The driver will be using Moderate Race Strategy!"<<endl; 
 	cout<<Name<<" Moderate Strategy Blueprint:"<<endl<<endl; 
 
-	cout<< "This Implies that "<<numberOfPitstops<<"pitstop strategy will be taken"<<endl;
+	cout<< "This Implies that "<<numberOfPitstops<<" pitstop strategy will be taken"<<endl;
 	cout<< "Start with Medium tires"<<endl;
 	cout<< "Pitstop 1(1/2 of race): Tyres replaced with medium set"<<endl;
 	cout<< "Pitstop 2(3/4 of race): Tyres replaced with soft set"<<endl<<endl;
 
 	cout<< "Strategy will give a steady start and will finish off strong with soft tyres"<<endl;
-	cout<<"Best strategy if there is high probalility of safe car for few laps"<< endl; 
+	cout<<"Best strategy if there is high probalility of safe car for few laps"<<endl; 
 
-	cout<< "Medium tires will give slower lap time if theres no safe car"<<endl; 
+	cout<< "Medium tires will give slower lap time if theres no safe car"<<endl<<endl; 
 
 }
