@@ -2,6 +2,14 @@
 
 void EngineeringTeam::receivedDesignSpecs() {
 	if(_sendSpecs==NULL)
-		_sendSpecs  = new SpecsBoardroom();
-	_sendSpecs->relayDimensions(this);
+		setBoardRoom();
+	((SpecsBoardroom*)_sendSpecs)->relayDimensions(this);
+}
+
+BoardRoom* EngineeringTeam::get_sendSpecs(){
+	return _sendSpecs;
+}
+
+void EngineeringTeam::setBoardRoom(){
+	_sendSpecs = new SpecsBoardroom();
 }

@@ -4,6 +4,7 @@ using namespace std;
 #ifndef ENGINEERINGTEAM_H
 #define ENGINEERINGTEAM_H
 
+#include "BoardRoom.h"
 #include "SpecsBoardroom.h"
 #include "../Engineering/ComplexSpecs.cpp"
 #include "../Engineering/Car.h"
@@ -14,7 +15,7 @@ class EngineeringTeam {
 
 	protected: 
 
-		SpecsBoardroom* _sendSpecs;
+		BoardRoom* _sendSpecs;
 		TestingBoardroom* tBoardRoom; 
 		void receivedDesignSpecs();
 	public:
@@ -25,7 +26,9 @@ class EngineeringTeam {
 
 		virtual ComplexSpecs* getSpecs();
 		virtual void setSpecs(ComplexSpecs *specs);
-		
+		BoardRoom* get_sendSpecs();
+		void setBoardRoom();
+
 		void sendMessage(bool result);
 		virtual void recieveMessage(Parts* part) ;// for testing team 
 		virtual void recieveMessage(Car* model) ; // for testing team 

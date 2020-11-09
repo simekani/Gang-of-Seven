@@ -32,13 +32,16 @@ int main(){
 
     //Design Team Mediator Testing
     EngineeringTeam* engineeringDepartment = new EngineDepartment();
-    BoardRoom* DelegationBoardroom = new SpecsBoardroom();
-    DelegationBoardroom->addMember(engineeringDepartment);
+    EngineeringTeam* designTeam = new DesignTeam();
+    designTeam->setSpecs(designSpecs);
+
+    if(((EngineeringTeam*)designTeam)->get_sendSpecs()==NULL)
+        designTeam->setBoardRoom();
+    (designTeam->get_sendSpecs())->addMember(engineeringDepartment);
     
 
 
-    EngineeringTeam* designTeam = new DesignTeam();
-    designTeam->setSpecs(designSpecs);
+
 
     EngineeringDepartment* Engine = new EngineDepartment();    
     EngineeringDepartment* Chassis = new ChassisDepartment();
