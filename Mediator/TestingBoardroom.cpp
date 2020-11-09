@@ -1,11 +1,10 @@
 #include "TestingBoardroom.h"
 #include "../Testing/TestingTeam.h"
-#include "EngineeringDepartment.h"
+
+TestingBoardroom* TestingBoardroom::instance;
 
 TestingBoardroom::TestingBoardroom() {
-	
 	EngineeringTeam* TestingDepartment = new TestingTeam();
- 
 	participants.push_back(TestingDepartment);
 }
 
@@ -14,10 +13,8 @@ TestingBoardroom::~TestingBoardroom() {
 }
 
 TestingBoardroom* TestingBoardroom::getInstance() {
-    
 	if (instance == NULL)
 		instance = new TestingBoardroom();
-
 	return instance;
 }
 

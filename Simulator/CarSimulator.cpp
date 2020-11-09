@@ -1,8 +1,6 @@
 #include "CarSimulator.h"
 
-
 CarSimulator::CarSimulator() {
-    
     this->CarModelGrip = 0;
     this->CarModelWeight = 0;
 }

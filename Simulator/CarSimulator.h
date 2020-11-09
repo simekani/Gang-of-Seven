@@ -2,7 +2,9 @@
 #define CARSIMULATOR_H
 
 #include "Simulator.h"
-#include "Car.h"
+#include "../Engineering/Car.h"
+
+class Simulator;
 
 class CarSimulator : public Simulator {
 
@@ -12,7 +14,6 @@ class CarSimulator : public Simulator {
         float CarModelGrip;
 
     public:
-
         CarSimulator();
         void setCarModelDetails(float PotentialGrip, float PotentialWeight);
         bool runSimulation();

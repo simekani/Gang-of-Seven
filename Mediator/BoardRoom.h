@@ -1,7 +1,10 @@
 #ifndef BOARDROOM_H
 #define BOARDROOM_H
 
-#include "EngineeringTeam.h"
+#include <vector>
+
+class EngineeringTeam;
+
 using namespace std;
 
 class BoardRoom {

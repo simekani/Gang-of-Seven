@@ -1,10 +1,4 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "floorWing.h"
-#include "AerodynamicsDepartment.h"
-#include "Floor.h"
 
 void floorWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){

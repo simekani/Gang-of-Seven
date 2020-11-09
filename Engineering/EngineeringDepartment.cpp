@@ -1,4 +1,5 @@
 #include "EngineeringDepartment.h"
+#include "../Mediator/TestingBoardroom.h"
 
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
 	this->_successor = aSuccessor;
@@ -33,3 +34,6 @@ void EngineeringDepartment::assembleCar(Parts* aPart) {
 	
 }
 
+void EngineeringDepartment::buildpart(vector <float> aSpec, string aName){
+	
+}

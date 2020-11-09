@@ -1,6 +1,5 @@
 #include "PartSimulator.h"
 
-
 PartSimulator::PartSimulator() {
     
     this->part = NULL;

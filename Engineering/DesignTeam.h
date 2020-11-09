@@ -2,7 +2,7 @@
 #define DESIGNTEAM_H
 
 #include "../Mediator/EngineeringTeam.h"
-#include "ComplexSpecs.cpp"
+#include "ComplexSpecs.h"
 
 class DesignTeam: public EngineeringTeam{
 	private:

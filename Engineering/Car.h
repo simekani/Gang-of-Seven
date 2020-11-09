@@ -1,7 +1,3 @@
-#include <exception>
-#include <vector>
-using namespace std;
-
 #ifndef __Car_h__
 #define __Car_h__
 
@@ -15,6 +11,11 @@ using namespace std;
 // class TeamPitStop;
 // class CarStorage;
 // class Car;
+
+#include <vector>
+using namespace std;
+
+class Parts;
 
 class Car
 {

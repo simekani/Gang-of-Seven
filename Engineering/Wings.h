@@ -1,9 +1,10 @@
-
 #ifndef __Wings_h__
 #define __Wings_h__
 
 #include "Parts.h"
 using namespace std;
+
+class Parts;
 
 class Wings: public Parts
 {

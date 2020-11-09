@@ -1,10 +1,9 @@
 #include "TestingTeam.h"
-#include "WindTunnel.h"
-#include "StartPartSimulator.h"
+
 #include "StartWindTunnel.h"
-#include "PartSimulator.h"
-#include "CarSimulator.h"
+#include "StartPartSimulator.h"
 #include "StartCarSimulator.h"
+#include "../Mediator/TestingBoardroom.h"
 
 TestingTeam::TestingTeam() {
     
