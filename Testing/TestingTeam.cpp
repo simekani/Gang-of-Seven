@@ -34,9 +34,9 @@ void TestingTeam::sendMessage(bool result) {
 
 void TestingTeam::receiveMessage(Parts* part) {
 	
-		simulatePartPerformance(part); 	
-		bool result = startPartSimulator->getResult();
-		sendMessage(result);
+	simulatePartPerformance(part); 	
+	bool result = startPartSimulator->getResult();
+	sendMessage(result);
 }
 
 void TestingTeam::recieveMessage(Car* model) {
