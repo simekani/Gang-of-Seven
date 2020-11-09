@@ -54,7 +54,7 @@ void FinalRace::startRace() {
     cout << endl << "Starting Race..." << endl;
     for (int i = 0; i < 24; i++) {
         int pitStop = rand() % 150 + 1;
-        if (pitStop % 12 == 0) {
+        if (pitStop % 20 == 0) {
             cout << "One of the teams have to enter the pit stop." << endl;
             vector<Car*> team;
 
@@ -79,15 +79,11 @@ void FinalRace::startRace() {
                 teamPitStop->attach(tempTyreChanger);
             }
             teamPitStop->assessCars();
+            cout << "The team is now exiting the pit stop" << endl << endl;
         }
         int positionChangeCount = rand() % 5;
         iterator->first();
-        CarStorage* positions = new RacingCarStorage();
-        while (!iterator->isDone()) {
-            positions->addCar(iterator->current());
-            iterator->next();
-        }
-        positions->addCar(iterator->current());
+        CarStorage* positions = store->getStoredGridOrder()->getPositions();
         for (int j = 0; j < positionChangeCount; j++) {
             int carPositionChange1 = rand() % positions->getSize();
             int carPositionChange2 = rand() % positions->getSize();

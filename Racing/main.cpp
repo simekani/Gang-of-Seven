@@ -75,14 +75,29 @@ void TestIterator() {
 }
 
 void TestRaceAndMemento() {
-    GridOrderStore* finalRaceStore = new GridOrderStore();
+    GridOrderStore* raceStore = new GridOrderStore();
+
     CarStorage* cars = new RacingCarStorage();
     for (int i = 0; i < CAR_COUNT; cars->addCar(new Car("Car " + to_string(i+1))), i++);
-    RaceFactory* factory = new FinalRaceFactory();
-    Race* finalRace = factory->createRace(cars, finalRaceStore);
+
+    RaceFactory* q_factory = new QualifyingRaceFactory();
+    Race* qualifyingRace = q_factory->createRace(cars, raceStore);
+    qualifyingRace->startRace();
+
+    CarStorage* qualifyingResults = raceStore->getStoredGridOrder()->getPositions();
+    Iterator* it = qualifyingResults->createIterator();
+    it->first();
+    cout << endl << "STARTING POSITIONS" << endl << endl;
+    for (int i = 0; i < cars->getSize(); i++, it->next())
+        cout << "Position " << (i+1) << ": " << it->current()->getName() << endl;
+    delete it;
+
+    RaceFactory* f_factory = new FinalRaceFactory();
+    Race* finalRace = f_factory->createRace(cars, raceStore);
     finalRace->startRace();
-    CarStorage* finalResults = finalRaceStore->getStoredGridOrder()->getPositions();
-    Iterator* it = finalResults->createIterator();
+
+    CarStorage* finalResults = raceStore->getStoredGridOrder()->getPositions();
+    it = finalResults->createIterator();
     
     it->first();
     for (int i = 0; i < cars->getSize(); i++, it->next())

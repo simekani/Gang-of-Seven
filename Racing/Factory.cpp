@@ -2,7 +2,7 @@
 
 QualifyingRaceFactory::QualifyingRaceFactory() {}
 Race* QualifyingRaceFactory::createRace(CarStorage* _storage, GridOrderStore* _store) {
-    return new QualifyingRace();
+    return new QualifyingRace(_storage, _store);
 }
 
 FinalRaceFactory::FinalRaceFactory() {}

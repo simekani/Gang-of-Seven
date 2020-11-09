@@ -18,7 +18,6 @@ class Race {
         Race();
         virtual ~Race();
         virtual void startRace() = 0;
-
 };
 
 class QualifyingRace : public Race {
