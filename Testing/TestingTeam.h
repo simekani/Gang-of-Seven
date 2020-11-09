@@ -10,11 +10,16 @@ class TestingTeam : public EngineeringTeam {
 
 private:
 	Command* startWindTunnel;
-	Command* startSimulator;
+	Command* startPartSimulator;
+	Command* startCarSimulator;
+
+	string testNamePerformed;
 	
 public:
 
 	TestingTeam();
+
+	~TestingTeam();
 	
 	void sendMessage(bool result);
 

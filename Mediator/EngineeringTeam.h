@@ -5,8 +5,8 @@ using namespace std;
 #define ENGINEERINGTEAM_H
 
 #include "SpecsBoardroom.h"
-#include "ComplexSpecs.cpp"
-#include "Car.h"
+#include "../Engineering/ComplexSpecs.cpp"
+#include "../Engineering/Car.h"
 #include "../Engineering/Driver.h"
 #include "TestingBoardroom.h"
 
@@ -22,7 +22,7 @@ class EngineeringTeam {
 		Car* _Car;
 		Driver* _Driver;
 		
-		void changed();
+		void receivedDesignSpecs();
 		virtual ComplexSpecs* getSpecs();
 		virtual void setSpecs(ComplexSpecs *specs);
 		void sendMessage(bool result);

@@ -1,11 +1,10 @@
 #ifndef ENGINEERINGDEPARTMENT_H
 #define ENGINEERINGDEPARTMENT_H
 
-#include "../Engineering/Car.h"
-#include "../Mediator/EngineeringTeam.h"
-#include "../Engineering/Parts.h"
-#include "../Engineering/Car.h"
-#include "../Engineering/ComplexSpecs.cpp"
+#include "EngineeringTeam.h"
+#include "Parts.h"
+#include "Car.h"
+#include "ComplexSpecs.cpp"
 #include "../Mediator/TestingBoardroom.h"
 
 class Parts;

@@ -2,18 +2,19 @@
 #include <string>
 using namespace std;
 
-#ifndef __combutionChamber_h__
-#define __combutionChamber_h__
+#ifndef __ignition_system_h__
+#define __ignition_system_h__
 
 #include "EngineDepartment.h"
 
 // class EngineDepartment;
-class combutionChamber;
+class ignition_system;
 
-class combutionChamber: public EngineDepartment
+class ignition_system: public EngineDepartment
 {
 
 	public: void buildpart(vector <float > &specs, string aName);
+
 };
 
 #endif

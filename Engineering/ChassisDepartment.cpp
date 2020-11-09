@@ -7,7 +7,7 @@ using namespace std;
 #include "Chassis.h"
 #include "EngineeringDepartment.h"
 
-void ChassisDepartment::buildpart(vector <float> aSpec, string aName) {
+void ChassisDepartment::buildpart(vector <float> &aSpec, string aName) {
 	if(aName == "Chassis"){
 		_parts = new Chassis();
 		_parts->buildPart();
