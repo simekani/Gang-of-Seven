@@ -43,7 +43,6 @@ class Car
 	public: 	
 		vector<EngineeringTeam*> _EngineeringTeam_;
 
-
 };
 
 #endif
