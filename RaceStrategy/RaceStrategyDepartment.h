@@ -10,7 +10,7 @@ private:
 	StrategyPack* Strategy;
 
 public:
-	RaceStrategyDepartment(); 
+	
 	void composeStrategy(string Strategy, string StrategyName);
 };
 
