@@ -11,6 +11,10 @@
 
 using namespace std;
 
+
+static TestingBoardroom* instance;
+TestingBoardroom();
+
 class Parts;
 
 class TestingBoardroom : public BoardRoom {
@@ -20,7 +24,6 @@ class TestingBoardroom : public BoardRoom {
 		TestingBoardroom();
 		~TestingBoardroom();
 	public:
-
 
 		static TestingBoardroom* getInstance();
 		void relayModel(Car* model);

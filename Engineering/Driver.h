@@ -5,14 +5,12 @@
 
 using namespace std;
 
-#include "../Mediator/EngineeringTeam.h"
-
 class Driver{
 
-	private: string _attribute;
+	private: string _DriverName;
 	public:
-		Driver(); 
-		EngineeringTeam* _EngineeringTeam_;
+		Driver(string Name);
+		string Driver::getDriverName()		 
 };
 
 #endif

@@ -9,5 +9,5 @@ void StartPartSimulator::setPart(Parts* part) {
 }
 
 void StartPartSimulator::execute() {
-    Result = static_cast<PartSimulator*>(simulator)->runSimulation();
+    Result = static_cast<PartSimulator*>(simulator)->Simulate();
 }

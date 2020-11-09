@@ -8,6 +8,7 @@ class Simulator {
 
     public:
         Simulator();
+        bool Simulate();
         virtual bool runSimulation()=0;
 };
 

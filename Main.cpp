@@ -98,8 +98,12 @@ int main(){
             // team - Cars
             // Cars - Race strategy , eng dept, 
             cout<<"Welcome to F1!"<<endl; 
-            cout<<"Create a Team"<<endl; 
+            cout<<"Create a Team"<<endl;
 
+            int budget; 
+            cout<<endl<< "Enter budget for a car"<<endl; 
+            cin>>budget; 
+    
             int strategyPack; 
             cout<<endl<< "Choose strategy Pack"<<endl
              <<"1. Defensive"<<endl
@@ -110,7 +114,7 @@ int main(){
 
             string name; 
             cout<< "Enter strategy name"<<endl;   
-            cin>> name;
+            cin>> name;        
 
             string pack = "Aggressive"; 
 
@@ -124,8 +128,8 @@ int main(){
                 cout<< "Invalid option "<<endl; 
             }
 
-            RaceStrategyDepartment* strategy = new RaceStrategyDepartment(); 
-            strategy->composeStrategy(pack, name);
+            Car* car1 = new Car(budget); 
+            car1->composeStrategy(pack, name);
             // chose car eng team 
 
             season = true; 
