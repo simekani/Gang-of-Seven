@@ -7,9 +7,6 @@ using namespace std;
 
 #include "ElectronicsDepartment.h"
 
-// class ElectronicsDepartment;
-class Composite_ElectronicsDepartment;
-
 class Composite_ElectronicsDepartment: public ElectronicsDepartment
 {
 	public: vector <ElectronicsDepartment* > _children;

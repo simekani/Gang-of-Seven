@@ -7,8 +7,6 @@
 #include <string>
 using namespace std;
 
-class combustionChamber;
-
 class combustionChamber: public EngineDepartment
 {
 

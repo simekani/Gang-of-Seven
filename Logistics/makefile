@@ -1,7 +1,5 @@
 main:
-	g++ -c *.cpp
-	g++ -o main *.o
-
+	g++ -g -std=c++0x *.cpp  *.h ../Engineering/*.cpp  ../Engineering/*.h  ../Mediator/*.cpp ../Mediator/*.h -o main
 run:	main
 	./main
 

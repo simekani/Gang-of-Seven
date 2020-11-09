@@ -3,9 +3,6 @@
 
 #include "../Mediator/EngineeringTeam.h"
 
-class EngineeringTeam;
-class Driver;
-
 class Driver
 {
 	private: string _attribute;
