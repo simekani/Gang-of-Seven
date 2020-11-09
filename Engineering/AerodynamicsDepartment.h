@@ -1,7 +1,6 @@
 #ifndef __AerodynamicsDepartment_h__
 #define __AerodynamicsDepartment_h__
 
-#include "CompositeAerodynamicsDepartment.h"
 #include "EngineeringDepartment.h"
 
 #include <string>

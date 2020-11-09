@@ -4,7 +4,7 @@
 #include "../Mediator/EngineeringTeam.h"
 #include "../Engineering/Parts.h"
 #include "Command.h"
-
+#include "WindTunnel.h"
 
 class TestingTeam : public EngineeringTeam {
 

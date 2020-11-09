@@ -2,10 +2,6 @@
 #define ENGINEERINGDEPARTMENT_H
 
 #include "../Mediator/EngineeringTeam.h"
-#include "Parts.h"
-#include "Car.h"
-#include "ComplexSpecs.cpp"
-#include "../Mediator/TestingBoardroom.h"
 
 class Parts;
 

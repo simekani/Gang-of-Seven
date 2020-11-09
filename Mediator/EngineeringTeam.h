@@ -2,11 +2,13 @@
 #define ENGINEERINGTEAM_H
 
 #include "BoardRoom.h"
-#include "SpecsBoardroom.h"
+
 #include "../Engineering/ComplexSpecs.cpp"
+
 #include "../Engineering/Car.h"
-#include "../Engineering/Driver.h"
-#include "TestingBoardroom.h"
+
+class Parts;
+class Driver;
 
 using namespace std;
 
@@ -15,8 +17,9 @@ class EngineeringTeam {
 	protected: 
 
 		BoardRoom* _sendSpecs;
-		TestingBoardroom* tBoardRoom; 
+		BoardRoom* tBoardRoom; 
 		void receivedDesignSpecs();
+		
 	public:
 
 		Car* _Car;

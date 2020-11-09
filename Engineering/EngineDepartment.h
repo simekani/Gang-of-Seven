@@ -7,7 +7,8 @@ using namespace std;
 
 #include "Engine.h"
 #include "EngineeringDepartment.h"
-#include "Composite_EngineDepartment.h"
+
+class Composite_EngineDepartment;
 
 class EngineDepartment: public EngineeringDepartment
 {

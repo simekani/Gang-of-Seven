@@ -4,7 +4,7 @@
 #include "BoardRoom.h"
 #include "../Engineering/Car.h"
 #include "../Engineering/Parts.h"
-#include "../Testing/TestingTeam.h"
+
 #include "../Engineering/EngineeringDepartment.h"
 
 #include <vector>
@@ -12,8 +12,6 @@
 using namespace std;
 
 class Parts;
-
-//Receive result from EDept. needs to be implemented in order to test
 
 class TestingBoardroom : public BoardRoom {
 

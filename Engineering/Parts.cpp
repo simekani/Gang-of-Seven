@@ -5,5 +5,5 @@ void Parts::buildPart(){
 }
 
 string Parts::getName(){
-
+    return "";
 }

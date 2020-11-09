@@ -1,4 +1,5 @@
 #include "EngineeringTeam.h"
+#include "SpecsBoardroom.h"
 
 void EngineeringTeam::receivedDesignSpecs() {
 	if(_sendSpecs==NULL)

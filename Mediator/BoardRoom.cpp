@@ -1,5 +1,9 @@
 #include "BoardRoom.h"
 
-void BoardRoom::addMember(EngineeringTeam* ETeam) {
+BoardRoom::BoardRoom(){
+    
+}
+
+void BoardRoom::addMember(EngineeringTeam* eTeam) {
 	
 }

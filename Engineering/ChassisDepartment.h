@@ -1,7 +1,6 @@
 #ifndef __ChassisDepartment_h__
 #define __ChassisDepartment_h__
 
-#include "Composite_ChassisDep.h"
 #include "Engine.h"
 #include "Chassis.h"
 #include "EngineeringDepartment.h"
@@ -10,6 +9,8 @@
 #include <string>
 
 using namespace std;
+
+class Composite_ChassisDep;
 
 class ChassisDepartment: public EngineeringDepartment
 {

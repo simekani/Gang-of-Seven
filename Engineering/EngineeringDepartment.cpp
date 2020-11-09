@@ -1,4 +1,5 @@
 #include "EngineeringDepartment.h"
+#include "../Mediator/TestingBoardroom.h"
 
 void EngineeringDepartment::setNext(EngineeringDepartment* aSuccessor) {
 	this->_successor = aSuccessor;

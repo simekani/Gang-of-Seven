@@ -1,4 +1,5 @@
 #include "TestingBoardroom.h"
+#include "../Testing/TestingTeam.h"
 
 TestingBoardroom::TestingBoardroom() {
 	EngineeringTeam* TestingDepartment = new TestingTeam();

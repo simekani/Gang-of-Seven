@@ -2,8 +2,10 @@
 #define STARTPARTSIMULATOR_H
 
 #include "Command.h"
-#include "Simulator.h"
 #include "../Engineering/Parts.h"
+#include "../Simulator/PartSimulator.h"
+
+class Parts;
 
 class StartPartSimulator : public Command {
 

@@ -9,5 +9,5 @@ void AerodynamicsDepartment::add(AerodynamicsDepartment* department){
 }
 
 AerodynamicsDepartment* AerodynamicsDepartment::getChild(int aParam){
-    
+    return NULL;
 }

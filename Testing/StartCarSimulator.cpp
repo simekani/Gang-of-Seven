@@ -1,6 +1,5 @@
 #include "StartCarSimulator.h"
 
-
 StartCarSimulator::StartCarSimulator(Simulator* simulator) {
     
     this->simulator = simulator;
