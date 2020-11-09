@@ -17,9 +17,7 @@ public:
 	Parts* part;
 	Container* container;
 
-	Cargo(Parts* part){
-		this->part = part;
-	}
+	Cargo(Parts* part);
 	virtual void pack();
 	virtual void unpack();
 };

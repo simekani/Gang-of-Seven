@@ -3,7 +3,7 @@
 
 #include "BoardRoom.h"
 
-#include "../Engineering/ComplexSpecs.cpp"
+#include "../Engineering/ComplexSpecs.h"
 
 #include "../Engineering/Car.h"
 
@@ -22,10 +22,10 @@ class EngineeringTeam {
 		
 	public:
 
+		EngineeringTeam();
 		Car* _Car;
 		Driver* _Driver;
 		
-
 		virtual ComplexSpecs* getSpecs();
 		virtual void setSpecs(ComplexSpecs *specs);
 		BoardRoom* get_sendSpecs();

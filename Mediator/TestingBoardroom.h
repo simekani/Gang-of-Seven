@@ -16,13 +16,12 @@ class Parts;
 class TestingBoardroom : public BoardRoom {
 
 	private:
-
 		static TestingBoardroom* instance;
-
-	public:
-
 		TestingBoardroom();
 		~TestingBoardroom();
+	public:
+
+
 		static TestingBoardroom* getInstance();
 		void relayModel(Car* model);
 		void relayPart(Parts* part);

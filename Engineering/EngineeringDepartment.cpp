@@ -34,3 +34,6 @@ void EngineeringDepartment::assembleCar(Parts* aPart) {
 	
 }
 
+void EngineeringDepartment::buildpart(vector <float> aSpec, string aName){
+	
+}
