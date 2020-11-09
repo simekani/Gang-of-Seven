@@ -34,3 +34,7 @@ void RaceStrategyDepartment::composeStrategy(string Strategy, string StrategyNam
 	this->Strategy->strategyBlueprint(); 
 }
 
+
+RaceStrategyDepartment::RaceStrategyDepartment() {
+    
+}

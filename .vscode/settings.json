@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.asm": "asm",
         "any": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -69,6 +70,7 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "xstring": "cpp"
     }
 }
