@@ -1,4 +1,3 @@
-
 #ifndef __Rear_h__
 #define __Rear_h__
 
@@ -6,7 +5,6 @@
 
 class Rear: public Wings
 {
-
 	public: string primitiveOperation();
 };
 

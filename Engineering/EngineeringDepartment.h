@@ -1,17 +1,11 @@
 #ifndef ENGINEERINGDEPARTMENT_H
 #define ENGINEERINGDEPARTMENT_H
 
-#include "EngineeringTeam.h"
-#include "Parts.h"
-#include "Car.h"
-#include "ComplexSpecs.cpp"
-#include "../Mediator/TestingBoardroom.h"
+#include "../Mediator/EngineeringTeam.h"
 
 class Parts;
-class Car;
-class EngineeringTeam;
-class EngineeringDepartment;
 
+#include <vector>
 #include <string>
 using namespace std;
 

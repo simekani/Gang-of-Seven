@@ -1,14 +1,11 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __ECU_h__
 #define __ECU_h__
 
 #include "ElectronicsDepartment.h"
 
-// class ElectronicsDepartment;
-class ECU;
+#include <vector>
+#include <string>
+using namespace std;
 
 class ECU: public ElectronicsDepartment
 {

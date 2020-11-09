@@ -1,7 +1,3 @@
-#include <exception>
-#include <vector>
-using namespace std;
-
 #include "Car.h"
 #include "Parts.h"
 #include "EngineeringTeam.h"
@@ -114,6 +110,7 @@ Car::Car(int budget){
 
 float Car::getWeight() {
 	return this->_weight;
+	combustionChamber* comb = new combustionChamber();
 }
 
 float Car::getMechanicalGrip() {
@@ -123,6 +120,4 @@ float Car::getMechanicalGrip() {
 void Car::pushParts(Parts* part) {
 	_carVector.push_back(part);
 }
-
-
 

@@ -1,6 +1,4 @@
-
 #include "Engine.h"
-#include "Parts.h"
 
 void Engine::getResult() {
 	cout << "Engine"<<endl;

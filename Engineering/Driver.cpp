@@ -1,4 +1,9 @@
-
 #include "Driver.h"
-#include "../Mediator/EngineeringTeam.h"
 
+Driver::Driver(string Name){
+    _DriverName=Name;
+}
+
+string Driver::getDriverName(){
+    return _DriverName;
+}

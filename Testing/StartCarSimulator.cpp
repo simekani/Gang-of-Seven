@@ -1,6 +1,5 @@
 #include "StartCarSimulator.h"
 
-
 StartCarSimulator::StartCarSimulator(Simulator* simulator) {
     
     this->simulator = simulator;
@@ -13,5 +12,5 @@ void StartCarSimulator::setCarModel(Car* model) {
 
 void StartCarSimulator::execute() {
     
-    this->Result = static_cast<CarSimulator*>(simulator)->runSimulation();
+    this->Result = static_cast<CarSimulator*>(simulator)->Simulate();
 }

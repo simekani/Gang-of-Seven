@@ -4,12 +4,11 @@
 #include <iostream>
 using namespace std;
 
-
 class Simulator {
 
     public:
-
         Simulator();
+        bool Simulate();
         virtual bool runSimulation()=0;
 };
 

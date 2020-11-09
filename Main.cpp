@@ -35,7 +35,8 @@ int main(){
 
     if(((EngineeringTeam*)designTeam)->get_sendSpecs()==NULL)
         designTeam->setBoardRoom();
-    (designTeam->get_sendSpecs())->addMember(engineeringDepartment);
+
+    designTeam->get_sendSpecs()->addMember(engineeringDepartment);
     
     
 

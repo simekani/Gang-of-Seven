@@ -1,14 +1,11 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __ignition_system_h__
 #define __ignition_system_h__
 
-#include "EngineDepartment.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-// class EngineDepartment;
-class ignition_system;
+#include "EngineDepartment.h"
 
 class ignition_system: public EngineDepartment
 {

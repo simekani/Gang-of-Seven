@@ -1,14 +1,11 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __Composite_ElectronicsDepartment_h__
 #define __Composite_ElectronicsDepartment_h__
 
-#include "ElectronicsDepartment.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-// class ElectronicsDepartment;
-class Composite_ElectronicsDepartment;
+#include "ElectronicsDepartment.h"
 
 class Composite_ElectronicsDepartment: public ElectronicsDepartment
 {

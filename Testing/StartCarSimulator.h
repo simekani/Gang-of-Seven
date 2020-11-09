@@ -2,12 +2,11 @@
 #define STARTCARSIMULATOR_H
 
 #include "Command.h"
-#include "CarSimulator.h"
+#include "../Simulator/CarSimulator.h"
 
 class StartCarSimulator : public Command {
 
     private:
-
         Simulator* simulator;
 
     public:

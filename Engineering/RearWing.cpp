@@ -1,9 +1,4 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "RearWing.h"
-#include "Rear.h"
 
 void RearWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){

@@ -1,11 +1,4 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "ChassisDepartment.h"
-#include "Composite_ChassisDep.h"
-#include "Chassis.h"
-#include "EngineeringDepartment.h"
 
 void ChassisDepartment::buildpart(vector <float> &aSpec, string aName) {
 	if(aName == "Chassis"){

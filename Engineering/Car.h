@@ -1,7 +1,3 @@
-#include <exception>
-#include <vector>
-using namespace std;
-
 #ifndef __Car_h__
 #define __Car_h__
 
@@ -25,6 +21,17 @@ using namespace std;
 #include "Engineering/RearWing.h"
 #include "Engineering/FrontWing.h"
 #include "Engineering/floorWing.h";
+=======
+// #include "../Mediator/EngineeringTeam.h"
+#include "combustionChamber.h"
+// #include "CarStorage.h"
+
+
+#include <vector>
+using namespace std;
+
+class Parts;
+class EngineeringTeam;
 
 class Car
 {
@@ -45,6 +52,17 @@ class Car
 		float getWeight();
 		float getMechanicalGrip();
 		void pushParts(Parts* part);
+
+	private: 	float _weight;
+	private: 	float _mechanicalGrip;
+	private: 	vector<Parts*> _carVector;
+	public: 	vector<EngineeringTeam*> _EngineeringTeam_;
+
+	public: float getWeight();
+
+	public: float getMechanicalGrip();
+
+	public: void pushParts(Parts* part);
 
 };
 
