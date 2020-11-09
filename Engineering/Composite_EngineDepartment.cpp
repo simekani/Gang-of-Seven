@@ -7,12 +7,12 @@ using namespace std;
 #include "EngineDepartment.h"
 
 
-void Composite_EngineDepartment::add(Engine* aParam) {
+void Composite_EngineDepartment::add(EngineDepartment* aParam) {
 	_children.push_back(aParam);
 }
 
 
-Engine* Composite_EngineDepartment::getChild(int aParam) {
+EngineDepartment* Composite_EngineDepartment::getChild(int aParam) {
 	return _children[aParam];
 }
 

@@ -26,9 +26,7 @@ int main(){
     ComplexSpecs* designSpecs = new ComplexSpecs();
     //promt for design specs
 
-
-
-
+ 
 
     //Design Team Mediator Testing
     EngineeringTeam* engineeringDepartment = new EngineDepartment();
@@ -39,9 +37,7 @@ int main(){
         designTeam->setBoardRoom();
     (designTeam->get_sendSpecs())->addMember(engineeringDepartment);
     
-
-
-
+    
 
     EngineeringDepartment* Engine = new EngineDepartment();    
     EngineeringDepartment* Chassis = new ChassisDepartment();
@@ -63,12 +59,6 @@ int main(){
     Electronics->setNext(Aerodynamics);
 
     
-
-
-
-
     //Mediator 
-
-
     return 0;
 }
