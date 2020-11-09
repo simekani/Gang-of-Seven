@@ -1,13 +1,12 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __combustionChamber_h__
 #define __combustionChamber_h__
 
 #include "EngineDepartment.h"
 
-// class EngineDepartment;
+#include <vector>
+#include <string>
+using namespace std;
+
 class combustionChamber;
 
 class combustionChamber: public EngineDepartment

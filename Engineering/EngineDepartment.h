@@ -1,15 +1,13 @@
+#ifndef __EngineDepartment_h__
+#define __EngineDepartment_h__
+
 #include <vector>
 #include <string>
 using namespace std;
 
-#ifndef __EngineDepartment_h__
-#define __EngineDepartment_h__
-
 #include "Engine.h"
 #include "EngineeringDepartment.h"
 #include "Composite_EngineDepartment.h"
-
-
 
 class EngineDepartment: public EngineeringDepartment
 {

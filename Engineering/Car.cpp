@@ -1,12 +1,4 @@
-#include <exception>
-#include <vector>
-using namespace std;
-
 #include "Car.h"
-#include "Parts.h"
-#include "EngineeringTeam.h"
-// #include "TeamPitStop.h"
-// #include "CarStorage.h"
 
 float Car::getWeight() {
 	return this->_weight;
@@ -21,6 +13,6 @@ void Car::pushParts(Parts* part) {
 }
 
 void Car::practice() {
-	throw "Not yet implemented";
+
 }
 

@@ -1,11 +1,12 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __RearWing_h__
 #define __RearWing_h__
 
+#include <vector>
+#include <string>
+using namespace std;
+
 #include "AerodynamicsDepartment.h"
+#include "Rear.h"
 
 class RearWing: public AerodynamicsDepartment
 {

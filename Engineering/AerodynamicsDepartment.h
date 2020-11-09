@@ -3,6 +3,7 @@
 
 #include "CompositeAerodynamicsDepartment.h"
 #include "EngineeringDepartment.h"
+
 #include <string>
 using namespace std;
 

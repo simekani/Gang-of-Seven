@@ -1,18 +1,14 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __Suspension_h__
 #define __Suspension_h__
 
-#include "ChassisDepartment.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-// class ChassisDepartment;
-class Suspension;
+#include "ChassisDepartment.h"
 
 class Suspension: public ChassisDepartment
 {
-
 	//public: void buildpart(float* aSpec, string aName);
 };
 

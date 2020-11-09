@@ -1,10 +1,4 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #include "FrontWing.h"
-#include "AerodynamicsDepartment.h"
-#include "Front.h"
 
 void FrontWing::buildpart(vector <float > &specs, string aName) {
 	if(aName == "floor"){
@@ -14,7 +8,7 @@ void FrontWing::buildpart(vector <float > &specs, string aName) {
 		for(int i = 0; i < specs.size(); i++){
 			cout << specs[i] <<endl;
 		}
-		
+	
 		result = false;
 		while(!result)
 			EngineeringDepartment::sendPartToTesting(_parts);

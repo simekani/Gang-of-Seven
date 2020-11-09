@@ -1,6 +1,3 @@
-#include <exception>
-using namespace std;
-
 #ifndef ENGINEERINGTEAM_H
 #define ENGINEERINGTEAM_H
 
@@ -10,6 +7,8 @@ using namespace std;
 #include "../Engineering/Car.h"
 #include "../Engineering/Driver.h"
 #include "TestingBoardroom.h"
+
+using namespace std;
 
 class EngineeringTeam {
 

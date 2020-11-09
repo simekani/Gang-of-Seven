@@ -1,6 +1,5 @@
 #include "DesignTeam.h"
 
-
 ComplexSpecs* DesignTeam::getSpecs() {
     return currentDesignSpecs;
 }

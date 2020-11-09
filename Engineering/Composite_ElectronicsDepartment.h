@@ -1,9 +1,9 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __Composite_ElectronicsDepartment_h__
 #define __Composite_ElectronicsDepartment_h__
+
+#include <vector>
+#include <string>
+using namespace std;
 
 #include "ElectronicsDepartment.h"
 

@@ -1,18 +1,15 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __ChassisDepartment_h__
 #define __ChassisDepartment_h__
 
 #include "Composite_ChassisDep.h"
 #include "Engine.h"
+#include "Chassis.h"
 #include "EngineeringDepartment.h"
 
-// class Composite_ChassisDep;
-class Engine;
-// class EngineeringDepartment;
-class ChassisDepartment;
+#include <vector>
+#include <string>
+
+using namespace std;
 
 class ChassisDepartment: public EngineeringDepartment
 {

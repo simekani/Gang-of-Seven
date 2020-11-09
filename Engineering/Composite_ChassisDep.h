@@ -1,14 +1,11 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __Composite_ChassisDep_h__
 #define __Composite_ChassisDep_h__
 
-#include "ChassisDepartment.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-// class ChassisDepartment;
-class Composite_ChassisDep;
+#include "ChassisDepartment.h"
 
 class Composite_ChassisDep: public ChassisDepartment
 {

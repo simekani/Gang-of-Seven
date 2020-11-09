@@ -1,4 +1,3 @@
-
 #ifndef __Floor_h__
 #define __Floor_h__
 
@@ -6,7 +5,6 @@
 
 class Floor: public Wings
 {
-
 	public: string primitiveOperation();
 };
 

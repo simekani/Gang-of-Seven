@@ -1,6 +1,4 @@
-
 #include "Electronics.h"
-#include "Parts.h"
 
 void Electronics::getResult() {
 	cout << "Electronics"<<endl;
