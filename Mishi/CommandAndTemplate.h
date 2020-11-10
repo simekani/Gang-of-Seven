@@ -1,6 +1,9 @@
 #ifndef COMMANDANDTEMPLATE_H
 #define COMMANDANDTEMPLATE_H
-#include "Builder.h"
+#include "../Engineering/Chassis.h"
+#include "../Engineering/Electronics.h"
+#include "../Engineering/Engine.h"
+#include "../Engineering/Wings.h"
 #include "ChainOfResponsibility.h"
 #include <vector>
 

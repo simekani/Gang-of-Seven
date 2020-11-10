@@ -1,9 +1,12 @@
 #ifndef ITERATORPATTERN_H
 #define ITERATORPATTERN_H
-#include "Builder.h"
+#include "../Engineering/Chassis.h"
+#include "../Engineering/Electronics.h"
+#include "../Engineering/Engine.h"
+#include "../Engineering/Wings.h"
 #include <vector>
 //Iterator
-class Iterator {
+class AbstractIterator {
 
 public:
 	virtual void first() = 0;
@@ -15,7 +18,7 @@ public:
 	virtual bool isDone() = 0;
 };
 //Concrete Iterator
-class PartIterator : public Iterator {
+class PartIterator : public AbstractIterator {
 private:
 	int index;
 	std::vector<Parts*> list;
@@ -31,10 +34,10 @@ public:
 class Warehouse {
 
 private:	
-	Iterator* iterator;
+	AbstractIterator* iterator;
 	std::vector<Parts*> list;
 public:
-	Iterator* createIterator(std::vector<Parts*> list);
+	AbstractIterator* createIterator(std::vector<Parts*> list);
 	void store();
 };
 #endif

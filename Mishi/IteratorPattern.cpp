@@ -19,7 +19,7 @@ bool PartIterator::isDone() {
     return (index <= list.size());
 }
 
-Iterator* Warehouse::createIterator(std::vector<Parts*> list) {
+AbstractIterator* Warehouse::createIterator(std::vector<Parts*> list) {
     this->list = list;
 	iterator = new PartIterator(list);
 	return iterator;
