@@ -17,7 +17,7 @@ bool CarSimulator::runSimulation() {
 
     float CarValue = CarModelGrip + CarModelWeight / 2;
 
-    if (CarValue >= 50) {
+    if (CarValue >= 25) {
 
         return true;
     }

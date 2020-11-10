@@ -2,6 +2,7 @@
 
 float Car::getWeight() {
 	return this->_weight;
+	combustionChamber* comb = new combustionChamber();
 }
 
 float Car::getMechanicalGrip() {
@@ -11,8 +12,3 @@ float Car::getMechanicalGrip() {
 void Car::pushParts(Parts* part) {
 	_carVector.push_back(part);
 }
-
-void Car::practice() {
-
-}
-

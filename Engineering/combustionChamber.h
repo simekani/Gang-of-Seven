@@ -9,7 +9,6 @@ using namespace std;
 
 class combustionChamber: public EngineDepartment
 {
-
 	public: void buildpart(vector <float > &specs, string aName);
 };
 

@@ -1,9 +1,9 @@
 #ifndef __Car_h__
 #define __Car_h__
 
- #include "Parts.h"
-// #include "EngineeringTeam.h"
-// #include "TeamPitStop.h"
+#include "Parts.h"
+// #include "../Mediator/EngineeringTeam.h"
+#include "combustionChamber.h"
 // #include "CarStorage.h"
 
 // class Parts;
@@ -16,16 +16,17 @@
 using namespace std;
 
 class Parts;
+class EngineeringTeam;
 
 class Car
 {
-	private: float _weight;
-	private: float _mechanicalGrip;
-	private: vector<Parts*> _carVector;
-	// public: EngineeringTeam* _unnamed_EngineeringTeam_;
+	private: 	float _weight;
+	private: 	float _mechanicalGrip;
+	private: 	vector<Parts*> _carVector;
+	public: 	vector<EngineeringTeam*> _EngineeringTeam_;
 	// public: TeamPitStop* _unnamed_TeamPitStop_;
 	// public: CarStorage* _unnamed_CarStorage_;
-
+	//public
 	public: float getWeight();
 
 	public: float getMechanicalGrip();
