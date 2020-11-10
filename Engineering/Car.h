@@ -1,37 +1,15 @@
 #ifndef __Car_h__
 #define __Car_h__
 
-#include "Parts.h"
-#include "../Testing/TestingTeam.h"
-#include "../Engineering/DesignTeam.h"
-#include "Mediator/EngineeringTeam.h"
-#include "Mediator/SpecsBoardroom.h"
-#include "Mediator/TestingBoardroom.h"
-
-#include "Engineering/Composite_ChassisDep.h"
-#include "Engineering/Composite_ElectronicsDepartment.h"
-#include "Engineering/Composite_EngineDepartment.h"
-
-#include "Engineering/DesignTeam.h"
-#include "Engineering/EngineDepartment.h"
-#include "Engineering/ChassisDepartment.h"
-#include "Engineering/EngineeringDepartment.h"
-#include "Engineering/ElectronicsDepartment.h"
-#include "Engineering/AerodynamicsDepartment.h"
-#include "Engineering/RearWing.h"
-#include "Engineering/FrontWing.h"
-#include "Engineering/floorWing.h";
-=======
-// #include "../Mediator/EngineeringTeam.h"
-#include "combustionChamber.h"
-// #include "CarStorage.h"
-
-
 #include <vector>
 using namespace std;
 
 class Parts;
 class EngineeringTeam;
+class TestingTeam;
+class DesignTeam;
+class SpecsBoardroom;
+class TestingBoardroom;
 
 class Car
 {
