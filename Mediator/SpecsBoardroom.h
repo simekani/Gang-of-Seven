@@ -10,6 +10,8 @@ class SpecsBoardroom : public BoardRoom {
 	public: 
 		SpecsBoardroom();
 		void relayDimensions(EngineeringTeam* engTeam);
+		 void addMember(EngineeringTeam* eTeam);
+
 };
 
 #endif

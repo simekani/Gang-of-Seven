@@ -14,7 +14,7 @@ class BoardRoom {
 
 	public:
 		BoardRoom();
-		void addMember(EngineeringTeam* eTeam);
+		virtual void addMember(EngineeringTeam* eTeam);
 };
 
 #endif

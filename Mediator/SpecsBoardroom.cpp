@@ -5,6 +5,14 @@ SpecsBoardroom::SpecsBoardroom() {
 }
 
 void SpecsBoardroom::relayDimensions(EngineeringTeam* engTeam) {
-    ((EngineeringDepartment*)participants[1])->recieveSpecs(engTeam->getSpecs());
+
+    vector<EngineeringTeam*>::iterator it = participants.begin();
+
+	static_cast<EngineeringDepartment*>(*it)->recieveSpecs(engTeam->getSpecs());
+
 }
 
+
+void SpecsBoardroom::addMember(EngineeringTeam* eTeam) {
+    participants.push_back(eTeam); 
+}

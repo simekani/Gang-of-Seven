@@ -6,6 +6,7 @@ TestingBoardroom* TestingBoardroom::instance;
 TestingBoardroom::TestingBoardroom() {
 	EngineeringTeam* TestingDepartment = new TestingTeam();
 	participants.push_back(TestingDepartment);
+
 }
 
 TestingBoardroom::~TestingBoardroom() {
@@ -39,4 +40,9 @@ void TestingBoardroom::relayResult(bool result) {
 	++it;
 
 	static_cast<EngineeringDepartment*>(*it)->receiveResult(result);
+}
+
+void TestingBoardroom::addMember(EngineeringTeam* eTeam) {
+    participants.resize(1); 
+    participants.push_back(eTeam);
 }
