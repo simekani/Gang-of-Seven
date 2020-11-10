@@ -4,10 +4,12 @@ Simulator::Simulator(){
     
 }
 
-void Simulator::Simulate(){
-    while(!runSimulation()){
-        
+bool Simulator::Simulate(){
+    bool tobeReturned = runSimulation();
+    while(!tobeReturned){
+        tobeReturned=runSimulation();
     }
+    return tobeReturned;
 }
 
 bool Simulator::runSimulation() {

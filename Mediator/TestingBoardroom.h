@@ -13,7 +13,6 @@ using namespace std;
 
 
 static TestingBoardroom* instance;
-TestingBoardroom();
 
 class Parts;
 

@@ -12,6 +12,7 @@ class TestingTeam;
 class DesignTeam;
 class SpecsBoardroom;
 class TestingBoardroom;
+class EngineeringDepartment;
 
 class Car
 {
@@ -34,11 +35,6 @@ class Car
 		void setName(string name);	
 		void pushParts(Parts* part);
 		void composeStrategy(string Strategy, string StrategyName);
-
-	private: 	
-		float _weight;
-		float _mechanicalGrip;
-		vector<Parts*> _carVector;
 		
 	public: 	
 		vector<EngineeringTeam*> _EngineeringTeam_;
