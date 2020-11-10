@@ -13,22 +13,22 @@ int main(){
     container->add( new ConcreteContainer("hospitality", max) );
    
     int n;
-    cout << "How many containers do you want to use to transport GARAGE equipment (max " << max << ")" << endl;
+    cout << "How many containers do you want to use to transport GARAGE equipment (min " << max << ")" << endl;
     cin >> n;
     container->handleRequest(n);
     cout << endl;
 
-    cout << "Given " << max <<" containers, how many containers do you want to use to transport OFFICE equipment (max " << max << ")" << endl;
+    cout << "Given " << max <<" containers, how many containers do you want to use to transport OFFICE equipment (min " << max << ")" << endl;
     cin >> n;
     container->handleRequest(n);
     cout << endl;
 
-    cout << "How many containers do you want to use to transport CATERING equipment (max  " << max << ")" << endl;
+    cout << "How many containers do you want to use to transport CATERING equipment (min  " << max << ")" << endl;
     cin >> n;
     container->handleRequest(n);
     cout << endl;
 
-    cout << "How many containers do you want to use to transport HOSPITALITY equipment (max " << max << ")" << endl;
+    cout << "How many containers do you want to use to transport HOSPITALITY equipment (min " << max << ")" << endl;
     cin >> n;
     container->handleRequest(n);
     cout << endl;
