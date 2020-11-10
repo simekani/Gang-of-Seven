@@ -290,3 +290,7 @@ void Car::composeStrategy(string Strategy, string StrategyName) {
 string Car::getName(){
         return name; 
 }
+
+std::vector<Parts*> Car::getVectorOfParts() {
+        return _carVector;
+}
