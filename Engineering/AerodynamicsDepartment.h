@@ -13,6 +13,7 @@ class AerodynamicsDepartment: public EngineeringDepartment
 	public: virtual void add(AerodynamicsDepartment* department) ;
 
 	public: virtual AerodynamicsDepartment* getChild(int aParam);
+	
 };
 
 #endif
