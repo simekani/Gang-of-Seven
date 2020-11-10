@@ -5,4 +5,4 @@ run:	main
 	./main
 
 clean:
-	rm main
+	rm *.o main
