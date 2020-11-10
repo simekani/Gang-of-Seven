@@ -32,10 +32,10 @@ Car::Car(string sname,int budget, bool autoGenerate){
         if(!autoGenerate){
                 //Car Specifications From Design Team
 
-                EngineeringDepartment* Engine = new EngineDepartment();    
-                EngineeringDepartment* Chassis = new ChassisDepartment();
-                EngineeringDepartment* Electronics = new ElectronicsDepartment();
-                EngineeringDepartment* Aerodynamics = new AerodynamicsDepartment();
+                EngineDepartment* Engine = new EngineDepartment();    
+                ChassisDepartment* Chassis = new ChassisDepartment();
+                ElectronicsDepartment* Electronics = new ElectronicsDepartment();
+                AerodynamicsDepartment* Aerodynamics = new AerodynamicsDepartment();
 
                 //Engineering department , chain of responsibilities
                 Aerodynamics->setNext(Engine);
@@ -58,30 +58,30 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 if(budget > 5000){ //they have money
 
                 //AeroDynamics Composite Design Testing
-                        EngineeringDepartment* Aerodynamics_composite = new CompositeAerodynamicsDepartment();
-                        AerodynamicsDepartment* rearWing = new RearWing();
-                        AerodynamicsDepartment* FloorWing = new floorWing();
-                        AerodynamicsDepartment* frontWing = new FrontWing();
+                        CompositeAerodynamicsDepartment* Aerodynamics_composite = new CompositeAerodynamicsDepartment();
+                        RearWing* rearWing = new RearWing();
+                        floorWing* FloorWing = new floorWing();
+                        FrontWing* frontWing = new FrontWing();
                         ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(rearWing);
                         ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(FloorWing);
                         ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(frontWing);
 
                 //Engine Composite Design Testing
-                        EngineeringDepartment* Engine_Composite = new Composite_EngineDepartment();
-                        EngineDepartment* ignition = new ignition_system();
-                        EngineDepartment* CombustionChamber = new combustionChamber();
+                        Composite_EngineDepartment* Engine_Composite = new Composite_EngineDepartment();
+                        ignition_system* ignition = new ignition_system();
+                        combustionChamber* CombustionChamber = new combustionChamber();
                         ((Composite_EngineDepartment*)Engine_Composite)->add(ignition);
                         ((Composite_EngineDepartment*)Engine_Composite)->add(CombustionChamber);
 
                 //Chassis Composite Design Testing
-                        EngineeringDepartment* Chassis_composite = new Composite_ChassisDep();
-                        ChassisDepartment* suspension = new Suspension();
+                        Composite_ChassisDep* Chassis_composite = new Composite_ChassisDep();
+                        Suspension* suspension = new Suspension();
                         ((Composite_ChassisDep*)Chassis_composite)->add(suspension);
                 
                 //Electronics Composite Design testing
-                        EngineeringDepartment* Electronics_composite = new Composite_ElectronicsDepartment();
-                        ElectronicsDepartment* eCU = new ECU();
-                        ElectronicsDepartment* sensors = new Sensors();
+                        Composite_ElectronicsDepartment* Electronics_composite = new Composite_ElectronicsDepartment();
+                        ECU* eCU = new ECU();
+                        Sensors* sensors = new Sensors();
                         ((Composite_ElectronicsDepartment*)Electronics_composite)->add(eCU);
                         ((Composite_ElectronicsDepartment*)Electronics_composite)->add(sensors);
 
