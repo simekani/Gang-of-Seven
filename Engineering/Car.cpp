@@ -224,7 +224,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 vector <float> specs;
                 string partArray[4]= {"wing", "engine", "chassis", "electronics"};
                 EngineeringTeam* designTeam = new DesignTeam();
-                designTeam->setSpecs(designSpecs);
+               
 
                 //promt for design specs
                 for(int i = 0; i < 4; i++){
