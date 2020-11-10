@@ -25,6 +25,8 @@ class TestingBoardroom : public BoardRoom {
 		void relayModel(Car* model);
 		void relayPart(Parts* part);
 		void relayResult(bool result);
+		 void addMember(EngineeringTeam* eTeam);
+
 };
 
 #endif

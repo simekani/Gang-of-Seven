@@ -66,7 +66,6 @@ Car::Car(string sname,int budget, bool autoGenerate){
                         ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(FloorWing);
                         ((CompositeAerodynamicsDepartment*)Aerodynamics)->add(frontWing);
 
-
                 //Engine Composite Design Testing
                         EngineeringDepartment* Engine_Composite = new Composite_EngineDepartment();
                         EngineDepartment* ignition = new ignition_system();
@@ -110,23 +109,22 @@ Car::Car(string sname,int budget, bool autoGenerate){
         //promt for design specs
                 for(int i = 0; i < 4; i++){
 
-                        for(int i = 0; i < 4; i++){
-                                cout << "Insert width: ";
+                        cout<<"Enter specifications for: "<<partArray[i]<<endl; 
+                                cout << "Insert width: "<<endl;
                                         cin >>spec;
                                         specs.push_back(spec);
                                         
-                                cout << "Insert weight: ";
+                                cout << "Insert weight: "<<endl;
                                         cin >>spec;
                                         specs.push_back(spec);
 
-                                cout << "Insert height: ";
+                                cout << "Insert height: "<<endl;
                                         cin >>spec;
                                         specs.push_back(spec);
 
-                                cout << "Insert Strength: ";
+                                cout << "Insert Strength: "<<endl;
                                         cin >>spec;
                                         specs.push_back(spec);
-                        }
                         designSpecs->setSpecDimensions(specs);
                         designSpecs->setDepartmentName(partArray[i]);
 
@@ -204,7 +202,6 @@ Car::Car(string sname,int budget, bool autoGenerate){
                         ((Composite_ElectronicsDepartment*)Electronics_composite)->add(eCU);
                         ((Composite_ElectronicsDepartment*)Electronics_composite)->add(sensors);
 
-
                         _EngineeringDepartments.push_back(Aerodynamics_composite);
                         _EngineeringDepartments.push_back(Engine_Composite);
                         _EngineeringDepartments.push_back(Chassis_composite);
@@ -229,10 +226,9 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 //promt for design specs
                 for(int i = 0; i < 4; i++){
 
-                        for(int i = 0; i < 4; i++){
                                         spec = 10.0;
                                         specs.push_back(spec);
-                                        
+
                                         spec = 15.0;
                                         specs.push_back(spec);
 
@@ -241,7 +237,6 @@ Car::Car(string sname,int budget, bool autoGenerate){
 
                                         spec = 21.0;
                                         specs.push_back(spec);
-                        }
                         designSpecs->setSpecDimensions(specs);
                         designSpecs->setDepartmentName(partArray[i]);
 
@@ -249,7 +244,9 @@ Car::Car(string sname,int budget, bool autoGenerate){
                         if(((EngineeringTeam*)designTeam)->get_sendSpecs()==NULL)
                                 designTeam->setBoardRoom();
                         (designTeam->get_sendSpecs())->addMember(_EngineeringDepartments[0]);
-                }  
+                        designTeam->setSpecs(designSpecs); 
+                }
+                Chassis->sendModelToTesting(this);
                // Chassis->sendModelToTesting(this);   //Car Model simulation           
         }
 

@@ -111,7 +111,7 @@ int main(){
             cout<<endl<< "Enter the Name your team's car"<<endl; 
             cin>>carName; 
 
-            Car* car1 = new Car(carName,budget,false); //race strategy implemented in constructor
+            Car* car1 = new Car(carName,budget,true); //race strategy implemented in constructor
             
             budget+=500;
             Car* car2 = new Car("Mercades 1",budget+100,true);

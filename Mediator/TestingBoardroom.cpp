@@ -41,3 +41,8 @@ void TestingBoardroom::relayResult(bool result) {
 
 	static_cast<EngineeringDepartment*>(*it)->receiveResult(result);
 }
+
+void TestingBoardroom::addMember(EngineeringTeam* eTeam) {
+    participants.resize(1); 
+    participants.push_back(eTeam);
+}
