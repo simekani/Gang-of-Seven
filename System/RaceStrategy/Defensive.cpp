@@ -16,20 +16,16 @@ Defensive::Defensive(string StrategyName) {
 
 void Defensive::strategyBlueprint() {
 	// TODO - implement Defensive::strategyBlueprint
-
-	cout<<endl<<"------------------------------------------------------------"<<endl; 
-	cout<< "The driver will be using Defensive Race Strategy!"<<endl; 
+	cout<<endl<< "The driver will be using Defensive Race Strategy!"<<endl; 
 	cout<<Name<<" Defensive Strategy Blueprint"<<endl; 
 
 	cout<< "This Implies that the "<<numberOfPitstops<<" pitstop strategy will be taken"<<endl;
 	cout<< "Start with Medium tires"<<endl;
-	cout<< "Pitstop 1(1/2 of race): Tyres replaced with Hard set"<<endl;
+	cout<< "Pitstop 1(1/2 of race): Tyres replaced with Hard set"<<endl<<endl;
 
 	cout<< "Strategy will ensure consistency is executed regardless of the conditions"<<endl;
+	cout<< "Strategy is slow if there is a safe car"<<endl<<endl; 	
 	cout<< "Strategy is slow if there is a safe car"<<endl; 	
-	cout<< "Strategy is slow if there is a safe car"<<endl; 
-	cout<<"------------------------------------------------------------"<<endl<<endl; 
-
 }
 
 
