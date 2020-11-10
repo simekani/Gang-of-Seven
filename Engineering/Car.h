@@ -32,6 +32,7 @@ class Car
 		void setName(string name);	
 		void pushParts(Parts* part);
 		void composeStrategy(string Strategy, string StrategyName);
+		std::vector<Parts*> getVectorOfParts();
 		
 	public: 	
 		vector<EngineeringTeam*> _EngineeringTeam_;
