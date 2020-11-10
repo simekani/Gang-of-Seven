@@ -11,9 +11,6 @@
 
 using namespace std;
 
-
-static TestingBoardroom* instance;
-
 class Parts;
 
 class TestingBoardroom : public BoardRoom {

@@ -136,6 +136,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
                                 designTeam->setBoardRoom();
                         (designTeam->get_sendSpecs())->addMember(_EngineeringDepartments[0]);
                 }
+                Chassis->sendModelToTesting(this); //Car model simulation 
         }
         else{
                 //Car Specifications From Design Team
@@ -226,7 +227,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 EngineeringTeam* designTeam = new DesignTeam();
                 designTeam->setSpecs(designSpecs);
 
-        //promt for design specs
+                //promt for design specs
                 for(int i = 0; i < 4; i++){
 
                         for(int i = 0; i < 4; i++){
@@ -249,10 +250,9 @@ Car::Car(string sname,int budget, bool autoGenerate){
                         if(((EngineeringTeam*)designTeam)->get_sendSpecs()==NULL)
                                 designTeam->setBoardRoom();
                         (designTeam->get_sendSpecs())->addMember(_EngineeringDepartments[0]);
-                }                
+                }  
+                Chassis->sendModelToTesting(this);   //Car Model simulation           
         }
-        
-
 
 }
 
@@ -289,4 +289,8 @@ void Car::composeStrategy(string Strategy, string StrategyName) {
 		this->Strategy = new Moderate(StrategyName); 
 	}
 	this->Strategy->strategyBlueprint(); 
+}
+
+string Car::getName(){
+        return name; 
 }

@@ -1,22 +1,5 @@
-// #include "Mediator/EngineeringTeam.h"
-// #include "Mediator/SpecsBoardroom.h"
-// #include "Mediator/TestingBoardroom.h"
-
-// #include "Engineering/Composite_ChassisDep.h"
-// #include "Engineering/Composite_ElectronicsDepartment.h"
-// #include "Engineering/Composite_EngineDepartment.h"
-// #include "Engineering/CompositeAerodynamicsDepartment.h"
-
-// #include "Engineering/DesignTeam.h"
-// #include "Engineering/EngineDepartment.h"
-// #include "Engineering/ChassisDepartment.h"
-// #include "Engineering/EngineeringDepartment.h"
-// #include "Engineering/ElectronicsDepartment.h"
-// #include "Engineering/AerodynamicsDepartment.h"
-// #include "Engineering/RearWing.h"
-// #include "Engineering/FrontWing.h"
-// #include "Engineering/floorWing.h"
 #include "Engineering/Car.h"
+#include "Racing/Factory.h"
 
 #include <stdlib.h>
 
@@ -29,7 +12,11 @@ int main(){
 
     bool season = false; 
 
-    
+    const int CAR_COUNT = 10;
+    const int points[] = {25, 18, 15, 12, 10, 8, 6, 4, 2 ,1};
+
+    CarStorage* cars;
+    GridOrderStore* raceStore ;
     
     while (true)
     {
@@ -55,11 +42,8 @@ int main(){
             else if (y ==2)
             {
                 cout<<endl<<"Select the option: "<<endl
-                <<"1. Modify Race Strategy"<<endl
-                <<"2. Modify Car"<<endl
-                <<"3. Test/Simulate Car"<<endl
-                <<"4. Determine Logistics"<<endl
-                <<"5. Race"<<endl<<endl; 
+                <<"1. Determine Logistics"<<endl
+                <<"2. Race"<<endl<<endl; 
                 cout<<"0. quit"<<endl; 
                 int val; 
                 cin>>val;  
@@ -67,24 +51,38 @@ int main(){
                 switch(val)
                 {
                     case 0: exit(0); 
+                    
                     case 1: 
-                        // simekani Main
+
                     break; 
 
-                    case 2: 
-                        //MP & Noah main 
-                    break;
-
-                    case 3: 
-                        // (Testing main)
-                    break; 
-
-                    case 4: 
-                        // Logistis shandis needs to be packed (Mish main)
-                    break;  
-
-                    case 5: 
+                    case 2:{
                            // Then Race stuff can happen(Sthe main )
+                        RaceFactory* q_factory = new QualifyingRaceFactory();
+                        Race* qualifyingRace = q_factory->createRace(cars, raceStore);
+                        qualifyingRace->startRace();
+
+                        CarStorage* qualifyingResults = raceStore->getStoredGridOrder()->getPositions();
+                        Iterator* it = qualifyingResults->createIterator();
+                        it->first();
+                        cout << endl << "STARTING POSITIONS" << endl << endl;
+                        for (int i = 0; i < cars->getSize(); i++, it->next())
+                            cout << "Position " << (i+1) << ": " << it->current()->getName() << endl;
+                        delete it;
+
+                        RaceFactory* f_factory = new FinalRaceFactory();
+                        Race* finalRace = f_factory->createRace(cars, raceStore);
+                        finalRace->startRace();
+
+                        CarStorage* finalResults = raceStore->getStoredGridOrder()->getPositions();
+                        it = finalResults->createIterator();
+                        
+                        it->first();
+                        for (int i = 0; i < cars->getSize(); i++, it->next())
+                            cout << "Position " << (i+1) << ": " << it->current()->getName() << " - " << points[i] << " POINTS" << endl;   
+
+                        return 0;                        
+                    }
                     break; 
 
                 }
@@ -114,6 +112,7 @@ int main(){
             cin>>carName; 
 
             Car* car1 = new Car(carName,budget,false); //race strategy implemented in constructor
+            
             budget+=500;
             Car* car2 = new Car("Second Car",budget+100,true);
             Car* car3 = new Car("Second Car",budget+100,true);
@@ -125,8 +124,20 @@ int main(){
             Car* car9 = new Car("Second Car",budget-300,true);
             Car* car10 = new Car("Second Car",budget-400,true);
 
+            cars = new RacingCarStorage();
+            raceStore = new GridOrderStore();
 
-            
+            cars->addCar(car1);
+            cars->addCar(car2);
+            cars->addCar(car3);
+            cars->addCar(car4);
+            cars->addCar(car5);
+            cars->addCar(car6);
+            cars->addCar(car7);
+            cars->addCar(car8);
+            cars->addCar(car9);
+            cars->addCar(car10);
+
             season = true; 
         }
 
@@ -134,3 +145,5 @@ int main(){
 
     return 0;
 }
+
+
