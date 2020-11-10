@@ -4,14 +4,14 @@
 
 #include "Iterator.h"
 
+//Concrete Iterator
 class PartIterator : public Iterator {
-
 private:
 	int index;
-	vector<Parts*> list;
+	std::vector<Parts*> list;
 	
 public:
-	PartIterator(vector<Parts*> );
+	PartIterator(std::vector<Parts*> );
 	void first();
 	void next();
 	Parts* current();

@@ -2,19 +2,16 @@
 #define WAREHOUSE_H
 #include <vector>
 
-#include "Iterator.h"
 #include "PartIterator.h"//uses
 
+//Aggregate
 class Warehouse {
 
-private:
-	vector<Parts*> list;	
+private:	
 	Iterator* iterator;
-
+	std::vector<Parts*> list;
 public:
-	Iterator* createIterator();
-
+	Iterator* createIterator(std::vector<Parts*> list);
 	void store();
 };
-
 #endif

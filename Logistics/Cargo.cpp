@@ -1,13 +1,8 @@
 #include "Cargo.h"
 
+
+//Receiver
 Cargo::Cargo(Parts* part){
-	this->part = part;
+    this->part = part;
 }
 
-void Cargo::pack(){
-
-}
-
-void Cargo::unpack(){
-    
-}

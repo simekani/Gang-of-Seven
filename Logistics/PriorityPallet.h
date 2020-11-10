@@ -3,14 +3,11 @@
 
 
 #include "Cargo.h"
+//Concrete Receivers
 class PriorityPallet : public Cargo {
-
 public:
-	PriorityPallet(Parts* part);
-
+	PriorityPallet(Parts* );
 	void pack();
-
 	void unpack();
 };
-
 #endif

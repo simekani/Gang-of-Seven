@@ -2,10 +2,9 @@
 #define TRANSPORT_H
 #include <string>
 
+//Abstract Template Class
 class Transport {
-
 public:
-	Transport();
 	void print();
 	virtual std::string getMode() = 0;
 

@@ -3,11 +3,8 @@
 
 #include "PackPallet.h"
 class UnpackPriorityPallet : public PackPallet {
-
-
 public:
 	UnpackPriorityPallet(Cargo* );
 	void execute();
 };
-
 #endif

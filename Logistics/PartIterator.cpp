@@ -1,6 +1,5 @@
 #include "PartIterator.h"
-
-PartIterator::PartIterator(vector<Parts*> list){
+PartIterator::PartIterator(std::vector<Parts*> list){
     this->list = list;
 }
 

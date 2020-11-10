@@ -2,20 +2,22 @@
 #include <iostream>
 using namespace std;
 
-PriorityPallet::PriorityPallet(Parts* part): Cargo(part){}
-
+//Concrete Receivers
+PriorityPallet::PriorityPallet(Parts* part): Cargo(part){};
 void PriorityPallet::pack() {
-    cout << "Pack " << part->getName() << " into a priority pallet" << endl;
+    std::cout << "Pack " << part->getName() << " into a priority pallet" << std::endl;
     parts.push_back(part);
 }
 
 void PriorityPallet::unpack() {
-    vector<Parts*>::iterator it = parts.begin();
+    std::vector<Parts*>::iterator it = parts.begin();
     while (it != parts.end()) {
-      if ((*it)->getName() == part->getName()) break;
+      if ((*it)->getName() == part->getName()){
+        std::cout << "Unpack " << part->getName() << " from the priority pallet\n" << std::endl;
+        break;
+      } 
       it++;
     }
     parts.erase(it);
 }
-
 
