@@ -2,6 +2,7 @@
 #define ITERATOR_H
 #include "../Engineering/Parts.h"
 
+//Iterator
 class Iterator {
 
 public:
@@ -13,5 +14,4 @@ public:
 
 	virtual bool isDone() = 0;
 };
-
 #endif

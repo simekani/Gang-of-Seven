@@ -3,12 +3,12 @@
 #include <string>
 
 #include "Transport.h"
+//Concrete Template Class
 class Ship : public Transport {
-
-
 public:
-	Ship();
 	std::string getMode();
 };
+
+
 
 #endif

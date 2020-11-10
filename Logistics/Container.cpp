@@ -3,9 +3,10 @@
 #include <iostream>
 using namespace std;
 
-Container::Container(const char* type, int n){
+//Handler
+Container::Container(const char* type){
+    this->next = NULL;
 	this->type = type;
-	this->numberOfContainers = n;
 }
 
 void Container::add(Container* next){
@@ -24,18 +25,18 @@ void Container::handleRequest(int i){
 			this->next->handleRequest(i);
 		}
 		else{
-			cout << "Request can't be completed." << endl;
+			std::cout << "Container is unavailable. Request to pack cannot be completed" << std::endl;
 		}
 	}
 	else{
-		cout << "No more available containers." << endl;
+		std::cout << "Request completed. All requested containers are packed." << std::endl;
 	}
 }
 
 void Container::pack(){
-	cout << "Pack " << type <<  " equipment" << endl;
+	std::cout << "Pack equipment." << std::endl;
 }
 
 void Container::unpack(){
-	cout << "Unpack " << type <<  " equipment" << endl;
+	std::cout << "Transport the container using the Truck, unpack all equipment upon arrival and store" << std::endl;
 }

@@ -2,13 +2,11 @@
 #define TRUCK_H
 #include <string>
 
+
+//Concrete Template Class
 #include "Transport.h"
 class Truck : public Transport {
-
-
 public:
-	Truck();
 	std::string getMode();
 };
-
 #endif

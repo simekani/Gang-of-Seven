@@ -3,6 +3,7 @@
 
 #include "Cargo.h"
 
+//Command
 class PackPallet{
 
 private:
@@ -16,7 +17,6 @@ public:
 	PackPallet(Cargo* receiver);
 	virtual void execute() = 0;
 };
-
 #endif
 
 

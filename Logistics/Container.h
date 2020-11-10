@@ -3,21 +3,19 @@
 #include <vector>
 #include <string>
 
-class Container  {
+//Handler
+    class Container {
+    private:
+        Container* next;
+        const char*  type;
 
-private:
-	Container* next;
-	const char*  type;
+    public:
+        Container(const char*  type);
+        void add(Container* next);
+        virtual void handleRequest(int i);
 
-public:
-	int numberOfContainers;//protected
-
-	Container(const char*  type, int n);
-	void add(Container* next);
-	void handleRequest(int i);
-
-	void pack();
-	void unpack();
-};
+        void pack();
+        void unpack();
+    };
 
 #endif

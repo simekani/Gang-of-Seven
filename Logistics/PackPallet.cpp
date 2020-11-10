@@ -1,5 +1,4 @@
-#include "PackPallet.h"
-
+//Command
 PackPallet::PackPallet(Cargo* receiver) {
 	this->receiver = receiver;
 }
