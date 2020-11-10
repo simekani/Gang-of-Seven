@@ -6,6 +6,7 @@ TestingBoardroom* TestingBoardroom::instance;
 TestingBoardroom::TestingBoardroom() {
 	EngineeringTeam* TestingDepartment = new TestingTeam();
 	participants.push_back(TestingDepartment);
+
 }
 
 TestingBoardroom::~TestingBoardroom() {
