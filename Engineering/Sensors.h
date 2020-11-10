@@ -1,18 +1,14 @@
-#include <exception>
-#include <string>
-using namespace std;
-
 #ifndef __Sensors_h__
 #define __Sensors_h__
 
-#include "ElectronicsDepartment.h"
+#include <vector>
+#include <string>
+using namespace std;
 
-// class ElectronicsDepartment;
-class Sensors;
+#include "ElectronicsDepartment.h"
 
 class Sensors: public ElectronicsDepartment
 {
-
 	public: void buildpart(vector <float> &aSpec, string aName);
 };
 

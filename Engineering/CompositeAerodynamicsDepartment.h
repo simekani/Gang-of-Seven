@@ -1,14 +1,11 @@
+#ifndef __CompositeAerodynamicsDepartment_h__
+#define __CompositeAerodynamicsDepartment_h__
+
 #include <vector>
 #include <string>
 using namespace std;
 
-#ifndef __CompositeAerodynamicsDepartment_h__
-#define __CompositeAerodynamicsDepartment_h__
-
 #include "AerodynamicsDepartment.h"
-
-// class AerodynamicsDepartment;
-//class CompositeAerodynamicsDepartment;
 
 class CompositeAerodynamicsDepartment: public AerodynamicsDepartment
 {

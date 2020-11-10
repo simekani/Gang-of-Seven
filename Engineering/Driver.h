@@ -1,15 +1,16 @@
 #ifndef DRIVER_H
 #define DRIVER_H
 
-#include "../Mediator/EngineeringTeam.h"
+#include <string>
 
-class EngineeringTeam;
-class Driver;
+using namespace std;
 
-class Driver
-{
-	private: string _attribute;
-	public: EngineeringTeam* _EngineeringTeam_;
+class Driver{
+
+	private: string _DriverName;
+	public:
+		Driver(string Name);
+		string getDriverName();		 
 };
 
 #endif

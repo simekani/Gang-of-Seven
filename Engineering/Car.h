@@ -1,37 +1,42 @@
-#include <exception>
-#include <vector>
-using namespace std;
-
 #ifndef __Car_h__
 #define __Car_h__
 
- #include "Parts.h"
-// #include "EngineeringTeam.h"
-// #include "TeamPitStop.h"
-// #include "CarStorage.h"
+#include <vector>
+using namespace std;
 
-// class Parts;
-// class EngineeringTeam;
-// class TeamPitStop;
-// class CarStorage;
-// class Car;
+#include "../RaceStrategy/StrategyPack.h"
+
+class Parts;
+class EngineeringTeam;
+class DesignTeam;
+class SpecsBoardroom;
+class EngineeringDepartment;
 
 class Car
 {
-	private: float _weight;
-	private: float _mechanicalGrip;
-	private: vector<Parts*> _carVector;
-	// public: EngineeringTeam* _unnamed_EngineeringTeam_;
-	// public: TeamPitStop* _unnamed_TeamPitStop_;
-	// public: CarStorage* _unnamed_CarStorage_;
+	protected: 
+		float _weight;
+		float _mechanicalGrip;
+		string name; 
+		vector<Parts*> _carVector;
+		vector<EngineeringDepartment* > _EngineeringDepartments;
+		DesignTeam* _designteam;
+		StrategyPack* Strategy;
 
-	public: float getWeight();
 
-	public: float getMechanicalGrip();
+	public:
+		Car(string sname,int budget, bool autoGenerate);
+		string getName();
+		float getWeight();
+		float getMechanicalGrip();
+		void setName(string name);	
+		void pushParts(Parts* part);
+		void composeStrategy(string Strategy, string StrategyName);
+		
+	public: 	
+		vector<EngineeringTeam*> _EngineeringTeam_;
 
-	public: void pushParts(Parts* part);
 
-	public: void practice();
 };
 
 #endif

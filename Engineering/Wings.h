@@ -1,4 +1,3 @@
-
 #ifndef __Wings_h__
 #define __Wings_h__
 
