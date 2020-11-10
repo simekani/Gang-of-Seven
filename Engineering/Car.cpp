@@ -4,6 +4,10 @@
 #include "RearWing.h"
 #include "FrontWing.h"
 
+#include "../RaceStrategy/Aggressive.h"
+#include "../RaceStrategy/Defensive.h"
+#include "../RaceStrategy/Moderate.h"
+
 #include "floorWing.h"
 #include "Suspension.h"
 #include "ignition_system.h"
@@ -36,6 +40,17 @@ Car::Car(int budget){
     Chassis->setNext(Electronics);
     Electronics->setNext(Aerodynamics);
 
+	//Creating Strategy
+	cout<<"Choose Strategy:"<<endl
+	<<"Aggressive"<<endl
+	<<"Defensive"<<endl
+	<<"Moderate"<<endl;
+	string sstrategy;
+	cin>>sstrategy;
+	string strategyName;
+	cout<<"Enter your Strategy's Name"<<endl;
+	cin>>strategyName;
+	composeStrategy(sstrategy,strategyName);
 
         if(budget > 5000000){ //they have money
 
@@ -135,3 +150,24 @@ void Car::pushParts(Parts* part) {
 	_carVector.push_back(part);
 }
 
+void Car::setName(string name){
+	this->name = name;
+}
+
+void Car::composeStrategy(string Strategy, string StrategyName) {
+	if(Strategy == "Aggressive")
+	{
+		this->Strategy = new Aggressive(StrategyName); 
+	}
+	else 
+	if(Strategy == "Defensive")
+	{
+		this->Strategy = new Defensive(StrategyName); 
+	}
+	else 
+	if(Strategy == "Moderate")
+	{
+		this->Strategy = new Moderate(StrategyName); 
+	}
+	this->Strategy->strategyBlueprint(); 
+}

@@ -4,6 +4,8 @@
 #include <vector>
 using namespace std;
 
+#include "../RaceStrategy/StrategyPack.h"
+
 class Parts;
 class EngineeringTeam;
 class TestingTeam;
@@ -21,26 +23,26 @@ class Car
 		vector<EngineeringDepartment* > _EngineeringDepartments;
 		TestingTeam* _testingteam;
 		DesignTeam* _designteam;
+		StrategyPack* Strategy;
 
 
 	public:
 		Car(int budget);
 		string getName();
-		string setName();
 		float getWeight();
 		float getMechanicalGrip();
+		void setName(string name);	
 		void pushParts(Parts* part);
+		void composeStrategy(string Strategy, string StrategyName);
 
-	private: 	float _weight;
-	private: 	float _mechanicalGrip;
-	private: 	vector<Parts*> _carVector;
-	public: 	vector<EngineeringTeam*> _EngineeringTeam_;
+	private: 	
+		float _weight;
+		float _mechanicalGrip;
+		vector<Parts*> _carVector;
+		
+	public: 	
+		vector<EngineeringTeam*> _EngineeringTeam_;
 
-	public: float getWeight();
-
-	public: float getMechanicalGrip();
-
-	public: void pushParts(Parts* part);
 
 };
 
