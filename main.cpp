@@ -29,6 +29,8 @@ int main(){
 
     bool season = false; 
 
+    
+    
     while (true)
     {
         if(season)
@@ -98,7 +100,8 @@ int main(){
         { 
             // create season
             // team - Cars
-            // Cars - Race strategy , eng dept, 
+            // Cars - Race strategy , eng dept,
+
             cout<<"Welcome to F1!"<<endl; 
             cout<<"Create a Team"<<endl;
 
@@ -106,9 +109,24 @@ int main(){
             cout<<endl<< "Enter budget for a car"<<endl; 
             cin>>budget; 
 
-            Car* car1 = new Car(budget); 
-            // chose car eng team 
+            string carName; 
+            cout<<endl<< "Enter the Name your team's car"<<endl; 
+            cin>>carName; 
 
+            Car* car1 = new Car(carName,budget,false); //race strategy implemented in constructor
+            budget+=500;
+            Car* car2 = new Car("Second Car",budget+100,true);
+            Car* car3 = new Car("Second Car",budget+100,true);
+            Car* car4 = new Car("Second Car",budget+200,true);
+            Car* car5 = new Car("Second Car",budget+300,true);
+            Car* car6 = new Car("Second Car",budget+400,true);
+            Car* car7 = new Car("Second Car",budget-100,true);
+            Car* car8 = new Car("Second Car",budget-200,true);
+            Car* car9 = new Car("Second Car",budget-300,true);
+            Car* car10 = new Car("Second Car",budget-400,true);
+
+
+            
             season = true; 
         }
 

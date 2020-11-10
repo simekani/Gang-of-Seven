@@ -8,10 +8,8 @@ using namespace std;
 
 class Parts;
 class EngineeringTeam;
-class TestingTeam;
 class DesignTeam;
 class SpecsBoardroom;
-class TestingBoardroom;
 class EngineeringDepartment;
 
 class Car
@@ -22,13 +20,12 @@ class Car
 		string name; 
 		vector<Parts*> _carVector;
 		vector<EngineeringDepartment* > _EngineeringDepartments;
-		TestingTeam* _testingteam;
 		DesignTeam* _designteam;
 		StrategyPack* Strategy;
 
 
 	public:
-		Car(int budget);
+		Car(string sname,int budget, bool autoGenerate);
 		string getName();
 		float getWeight();
 		float getMechanicalGrip();
