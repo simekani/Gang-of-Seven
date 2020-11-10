@@ -29,7 +29,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
 
         setName(sname);
         
-        if(autoGenerate){
+        if(!autoGenerate){
                 //Car Specifications From Design Team
 
                 EngineeringDepartment* Engine = new EngineDepartment();    
@@ -135,7 +135,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
                                 designTeam->setBoardRoom();
                         (designTeam->get_sendSpecs())->addMember(_EngineeringDepartments[0]);
                 }
-                Chassis->sendModelToTesting(this); //Car model simulation 
+               // Chassis->sendModelToTesting(this); //Car model simulation 
         }
         else{
                 //Car Specifications From Design Team
@@ -250,7 +250,7 @@ Car::Car(string sname,int budget, bool autoGenerate){
                                 designTeam->setBoardRoom();
                         (designTeam->get_sendSpecs())->addMember(_EngineeringDepartments[0]);
                 }  
-                Chassis->sendModelToTesting(this);   //Car Model simulation           
+               // Chassis->sendModelToTesting(this);   //Car Model simulation           
         }
 
 }

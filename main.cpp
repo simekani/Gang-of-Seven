@@ -114,15 +114,15 @@ int main(){
             Car* car1 = new Car(carName,budget,false); //race strategy implemented in constructor
             
             budget+=500;
-            Car* car2 = new Car("Second Car",budget+100,true);
-            Car* car3 = new Car("Second Car",budget+100,true);
-            Car* car4 = new Car("Second Car",budget+200,true);
-            Car* car5 = new Car("Second Car",budget+300,true);
-            Car* car6 = new Car("Second Car",budget+400,true);
-            Car* car7 = new Car("Second Car",budget-100,true);
-            Car* car8 = new Car("Second Car",budget-200,true);
-            Car* car9 = new Car("Second Car",budget-300,true);
-            Car* car10 = new Car("Second Car",budget-400,true);
+            Car* car2 = new Car("Mercades 1",budget+100,true);
+            Car* car3 = new Car("Ferrari 1",budget+100,true);
+            Car* car4 = new Car("Peugout 1",budget+200,true);
+            Car* car5 = new Car("Honda 1",budget+300,true);
+            Car* car6 = new Car("Toyata 1",budget+400,true);
+            Car* car7 = new Car("Toyata 2",budget-100,true);
+            Car* car8 = new Car("Honda 2",budget-200,true);
+            Car* car9 = new Car("Peugout 2",budget-300,true);
+            Car* car10 = new Car("Ferrari 2",budget-400,true);
 
             cars = new RacingCarStorage();
             raceStore = new GridOrderStore();

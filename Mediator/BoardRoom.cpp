@@ -5,5 +5,5 @@ BoardRoom::BoardRoom(){
 }
 
 void BoardRoom::addMember(EngineeringTeam* eTeam) {
-	participants.insert(participants.begin()+1, eTeam); 
+	//participants.insert(participants.begin()+1, static_cast<EngineeringTeam*>(eTeam)); 
 }
