@@ -10,7 +10,7 @@ class Driver{
 	private: string _DriverName;
 	public:
 		Driver(string Name);
-		string Driver::getDriverName()		 
+		string getDriverName();		 
 };
 
 #endif

@@ -12,6 +12,7 @@ class Composite_ChassisDep: public ChassisDepartment
 {
 	private: vector <ChassisDepartment*> _children;
 
+	public: Composite_ChassisDep();
 	public: void buildpart(vector <float> aSpec, string aName);
 
 	public: void add(ChassisDepartment* aParam);

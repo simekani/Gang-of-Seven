@@ -105,33 +105,8 @@ int main(){
             int budget; 
             cout<<endl<< "Enter budget for a car"<<endl; 
             cin>>budget; 
-    
-            int strategyPack; 
-            cout<<endl<< "Choose strategy Pack"<<endl
-             <<"1. Defensive"<<endl
-            <<"2. Moderate"<<endl
-            <<"3. Aggressive"<<endl; 
-            cout<<"0. quit"<<endl<<endl; 
-            cin>>strategyPack; 
-
-            string name; 
-            cout<< "Enter strategy name"<<endl;   
-            cin>> name;        
-
-            string pack = "Aggressive"; 
-
-            switch(strategyPack)
-            {
-                case 0: exit(0); break; 
-                case 1: pack = "Defensive" ;    break; 
-                case 2: pack = "Moderate" ;     break; 
-                case 3: pack = "Aggressive" ;   break; 
-                default: 
-                cout<< "Invalid option "<<endl; 
-            }
 
             Car* car1 = new Car(budget); 
-            car1->composeStrategy(pack, name);
             // chose car eng team 
 
             season = true; 

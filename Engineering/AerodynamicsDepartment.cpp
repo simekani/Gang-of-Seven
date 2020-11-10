@@ -1,5 +1,6 @@
 #include "AerodynamicsDepartment.h"
 #include "Front.h"
+#include "Floor.h"
 #include "Rear.h"
 
 void AerodynamicsDepartment::buildpart(vector <float > &specs, string aName){
