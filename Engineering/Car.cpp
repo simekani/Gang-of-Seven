@@ -77,14 +77,14 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 //Chassis Composite Design Testing
                         EngineeringDepartment* Chassis_composite = new Composite_ChassisDep();
                         ChassisDepartment* suspension = new Suspension();
-                        ((Composite_ChassisDep*)Chassis)->add(suspension);
+                        ((Composite_ChassisDep*)Chassis_composite)->add(suspension);
                 
                 //Electronics Composite Design testing
                         EngineeringDepartment* Electronics_composite = new Composite_ElectronicsDepartment();
                         ElectronicsDepartment* eCU = new ECU();
                         ElectronicsDepartment* sensors = new Sensors();
-                        ((Composite_ElectronicsDepartment*)Electronics)->add(eCU);
-                        ((Composite_ElectronicsDepartment*)Electronics)->add(sensors);
+                        ((Composite_ElectronicsDepartment*)Electronics_composite)->add(eCU);
+                        ((Composite_ElectronicsDepartment*)Electronics_composite)->add(sensors);
 
 
                         _EngineeringDepartments.push_back(Aerodynamics_composite);
@@ -106,7 +106,6 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 vector <float> specs;
                 string partArray[4]= {"wing", "engine", "chassis", "electronics"};
                 EngineeringTeam* designTeam = new DesignTeam();
-                designTeam->setSpecs(designSpecs);
 
         //promt for design specs
                 for(int i = 0; i < 4; i++){
@@ -196,14 +195,14 @@ Car::Car(string sname,int budget, bool autoGenerate){
                 //Chassis Composite Design Testing
                         EngineeringDepartment* Chassis_composite = new Composite_ChassisDep();
                         ChassisDepartment* suspension = new Suspension();
-                        ((Composite_ChassisDep*)Chassis)->add(suspension);
+                        ((Composite_ChassisDep*)Chassis_composite)->add(suspension);
                 
                 //Electronics Composite Design testing
                         EngineeringDepartment* Electronics_composite = new Composite_ElectronicsDepartment();
                         ElectronicsDepartment* eCU = new ECU();
                         ElectronicsDepartment* sensors = new Sensors();
-                        ((Composite_ElectronicsDepartment*)Electronics)->add(eCU);
-                        ((Composite_ElectronicsDepartment*)Electronics)->add(sensors);
+                        ((Composite_ElectronicsDepartment*)Electronics_composite)->add(eCU);
+                        ((Composite_ElectronicsDepartment*)Electronics_composite)->add(sensors);
 
 
                         _EngineeringDepartments.push_back(Aerodynamics_composite);
